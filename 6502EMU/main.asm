@@ -23,6 +23,8 @@ start: ;to avoid overwriting the interrupt table with our includes!
 .include "Instructions/CLD.asm"
 .include "Instructions/CLI.asm"
 .include "Instructions/CLV.asm"
+.include "Instructions/CPX.asm"
+.include "Instructions/CPY.asm"
 .include "Instructions/LDA.asm"
 .include "Instructions/LDX.asm"
 .include "Instructions/LDY.asm"
