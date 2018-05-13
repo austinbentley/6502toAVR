@@ -18,7 +18,18 @@ start: ;to avoid overwriting the interrupt table with our includes!
 .include "dereferencer.asm"
 .include "Instructions/unimplemented_instructions.asm"
 .include "Instructions/BRK.asm"
+.include "Instructions/CLC.asm"
+.include "Instructions/CLD.asm"
+.include "Instructions/CLI.asm"
+.include "Instructions/CLV.asm"
 .include "Instructions/LDA.asm"
+.include "Instructions/LDX.asm"
+.include "Instructions/LDY.asm"
+.include "Instructions/SEC.asm"
+.include "Instructions/SED.asm"
+.include "Instructions/SEI.asm"
+
+
 .include "instruction_mappings.asm"
 
 init:
@@ -53,6 +64,7 @@ _start:
 	clr AR ; clear A register
 	clr XR ; clear X register
 	clr YR ; clear Y register
+	clr SR ; clear status register
 	clr ZH ; clear PC HIGH register
 	clr ZL ; clear PC LOW register
 	CLR XH
@@ -79,12 +91,7 @@ fetch_setup:
 	LDI TEMPPCH, HIGH(ROM_START_EMU) 
 	LDI TEMPPCL, LOW(ROM_START_EMU)
 
-	inc XR
-	inc XR
-	inc XR
-
 fetch:
-	nop
 
 	dereferencer INSTRUCTION
 	ldi r16, 2
