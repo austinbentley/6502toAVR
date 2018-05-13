@@ -21,7 +21,24 @@ LDA_immediate: ;LDA #$09 => A9 09
 
 	RET
 
-;LDA_absolute:
+LDA_absolute:
+	swapPCwithTEMPPC
+
+	ADIW ZH:ZL, 1
+
+	;TODO: verify endianness is correct. 
+	dereferencer r22 
+	ADIW ZH:ZL, 1
+	dereferencer r23
+	mov zl, r22
+	mov zh, r23
+
+	dereferencer AR
+
+	ADIW ZH:ZL, 1
+	RET
+
+
 ;LDA_indirect_Y:
 ;LDA_zpg_X
 ;LDA_absolute_Y:

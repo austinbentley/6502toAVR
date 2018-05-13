@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.7  c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm Sun May 13 02:53:31 2018
+AVRASM ver. 2.2.7  c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm Sun May 13 03:12:44 2018
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m328pdef.inc'
 c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(14): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\programcode.asm'
@@ -1012,7 +1012,7 @@ c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(22): Including
                                  ;
                                  
                                  start: ;to avoid overwriting the interrupt table with our includes!
-000000 940c 053f                 	jmp init
+000000 940c 05ac                 	jmp init
                                  
                                  
 000002 0000
@@ -2065,14 +2065,15 @@ c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(12): warning: 
 000408 dddd
 000409 dddd
 00040a dddd                      	     .DB 0xA9, 0x09, 0xDA, 0xDB, 0xDC, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,                                  0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD                                 , 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0x00040b 00a9
-00040c 01a9
-00040d 02a9
-00040e 03a9
-00040f 04a9
-000410 b5b4
-000411 b7b6
-000412 b9b8
-000413 bbba                      DD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,                                  0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD                                 , 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0x000100                           DD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,                                  0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD                                 , 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0x                                 DD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,                                  0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD000000 ee
+00040c 03ad
+00040d ab00
+00040e 02cd
+00040f 03a9
+000410 04a9
+000411 b5b4
+000412 b7b6
+000413 b9b8
+000414 bbba                      DD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,                                  0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD                                 , 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0x000100                           DD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,                                  0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD                                 , 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0x                                 DD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,                                  0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD000000 ee
 000001 ee
 000002 ee                        , 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0x                                 DD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,                                  0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD                                 .include "definitions.asm"
                                  
@@ -2334,7 +2335,7 @@ c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(12): warning: 
                                  ;LDA_immediate:
                                  TAX_implied:
                                  LDY_absolute:
-                                 LDA_absolute:
+                                 ;LDA_absolute:
                                  LDX_absolute:
                                  BCS_relative:
                                  LDA_indirect_Y:
@@ -2387,7 +2388,7 @@ c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(12): warning: 
                                  INC_absolute_X:
                                  INVALID_OPCODE:
                                  .include "Instructions/BRK.asm"
-000414 9598                      
+000415 9598                      
                                   * BRK.asm
                                   *
                                   *  Created: 5/13/2018 2:46:37 AM
@@ -2396,7 +2397,7 @@ c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(12): warning: 
                                  
                                  BRK_implied:
                                  .include "Instructions/LDA.asm"
-000415 9598                      
+000416 9598                      
                                   * LDA.asm
                                   *
                                   *  Created: 5/12/2018 9:14:03 PM
@@ -2408,51 +2409,157 @@ c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(12): warning: 
                                  ;LDA_zpg:
                                  
                                  LDA_immediate: ;LDA #$09 => A9 09
-000416 2f0e
-000417 2fe4
-000418 2f40
-000419 2f0f
-00041a 2ff5
-00041b 2f50                      	swapPCwithTEMPPC
+000417 2f0e
+000418 2fe4
+000419 2f40
+00041a 2f0f
+00041b 2ff5
+00041c 2f50                      	swapPCwithTEMPPC
                                  
-00041c 9631                      	ADIW ZH:ZL, 1 ;grab the next byte 
+00041d 9631                      	ADIW ZH:ZL, 1 ;grab the next byte 
                                  	
-00041d 30f8
-00041e f434
-00041f e001
-000420 0ff0
-000421 8020
-000422 1bf0
-000423 940c 043c
-000425 31f0
-000426 f47c
-000427 e008
-000428 e01b
-000429 e024
-00042a 2f3e
-00042b 2f4f
-00042c 1bf0
-00042d 0f11
-00042e 1f22
-00042f 0fe1
-000430 1ff2
-000431 9024
-000432 2fe3
-000433 2ff4
-000434 940c 043c
-000436 31f4
-000437 f40c
-000438 9598
+00041e 30f8
+00041f f434
+000420 e001
+000421 0ff0
+000422 8020
+000423 1bf0
+000424 940c 043d
+000426 31f0
+000427 f47c
+000428 e008
+000429 e01b
+00042a e024
+00042b 2f3e
+00042c 2f4f
+00042d 1bf0
+00042e 0f11
+00042f 1f22
+000430 0fe1
+000431 1ff2
+000432 9024
+000433 2fe3
+000434 2ff4
+000435 940c 043d
+000437 31f4
+000438 f40c
 000439 9598
-00043a 940c 043c
-00043c 0000                      	dereferencer AR
+00043a 9598
+00043b 940c 043d
+00043d 0000                      	dereferencer AR
                                  	;call dereferencer
                                  	
-00043d 9631                      	ADIW ZH:ZL, 1 ;increase pc to next instruction
+00043e 9631                      	ADIW ZH:ZL, 1 ;increase pc to next instruction
                                  
-00043e 9508                      	RET
+00043f 9508                      	RET
                                  
-                                 ;LDA_absolute:
+                                 LDA_absolute:
+000440 2f0e
+000441 2fe4
+000442 2f40
+000443 2f0f
+000444 2ff5
+000445 2f50                      	swapPCwithTEMPPC
+                                 
+000446 9631                      	ADIW ZH:ZL, 1
+                                 
+                                 	;TODO: verify endianness is correct. 
+000447 30f8
+000448 f434
+000449 e001
+00044a 0ff0
+00044b 8160
+00044c 1bf0
+00044d 940c 0466
+00044f 31f0
+000450 f47c
+000451 e008
+000452 e01b
+000453 e024
+000454 2f3e
+000455 2f4f
+000456 1bf0
+000457 0f11
+000458 1f22
+000459 0fe1
+00045a 1ff2
+00045b 9164
+00045c 2fe3
+00045d 2ff4
+00045e 940c 0466
+000460 31f4
+000461 f40c
+000462 9598
+000463 9598
+000464 940c 0466
+000466 0000                      	dereferencer r22 
+000467 9631                      	ADIW ZH:ZL, 1
+000468 30f8
+000469 f434
+00046a e001
+00046b 0ff0
+00046c 8170
+00046d 1bf0
+00046e 940c 0487
+000470 31f0
+000471 f47c
+000472 e008
+000473 e01b
+000474 e024
+000475 2f3e
+000476 2f4f
+000477 1bf0
+000478 0f11
+000479 1f22
+00047a 0fe1
+00047b 1ff2
+00047c 9174
+00047d 2fe3
+00047e 2ff4
+00047f 940c 0487
+000481 31f4
+000482 f40c
+000483 9598
+000484 9598
+000485 940c 0487
+000487 0000                      	dereferencer r23
+000488 2fe6                      	mov zl, r22
+000489 2ff7                      	mov zh, r23
+                                 
+00048a 30f8
+00048b f434
+00048c e001
+00048d 0ff0
+00048e 8020
+00048f 1bf0
+000490 940c 04a9
+000492 31f0
+000493 f47c
+000494 e008
+000495 e01b
+000496 e024
+000497 2f3e
+000498 2f4f
+000499 1bf0
+00049a 0f11
+00049b 1f22
+00049c 0fe1
+00049d 1ff2
+00049e 9024
+00049f 2fe3
+0004a0 2ff4
+0004a1 940c 04a9
+0004a3 31f4
+0004a4 f40c
+0004a5 9598
+0004a6 9598
+0004a7 940c 04a9
+0004a9 0000                      	dereferencer AR
+                                 
+0004aa 9631                      	ADIW ZH:ZL, 1
+0004ab 9508                      	RET
+                                 
+                                 
                                  ;LDA_indirect_Y:
                                  ;LDA_zpg_X
                                  ;LDA_absolute_Y:
@@ -2465,301 +2572,301 @@ c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(12): warning: 
                                   */ 
                                  
                                  
-00043f 0415
-000440 0414
-000441 0414
-000442 0414
-000443 0414
-000444 0414
-000445 0414
-000446 0414
-000447 0414
-000448 0414
-000449 0414
-00044a 0414
-00044b 0414
-00044c 0414
-00044d 0414
-00044e 0414
-00044f 0414
-000450 0414
-000451 0414
-000452 0414
-000453 0414
-000454 0414
-000455 0414
-000456 0414
-000457 0414
-000458 0414
-000459 0414
-00045a 0414
-00045b 0414
-00045c 0414
-00045d 0414
-00045e 0414
-00045f 0414
-000460 0414
-000461 0414
-000462 0414
-000463 0414
-000464 0414
-000465 0414
-000466 0414
-000467 0414
-000468 0414
-000469 0414
-00046a 0414
-00046b 0414
-00046c 0414
-00046d 0414
-00046e 0414
-00046f 0414
-000470 0414
-000471 0414
-000472 0414
-000473 0414
-000474 0414
-000475 0414
-000476 0414
-000477 0414
-000478 0414
-000479 0414
-00047a 0414
-00047b 0414
-00047c 0414
-00047d 0414
-00047e 0414
-00047f 0414
-000480 0414
-000481 0414
-000482 0414
-000483 0414
-000484 0414
-000485 0414
-000486 0414
-000487 0414
-000488 0414
-000489 0414
-00048a 0414
-00048b 0414
-00048c 0414
-00048d 0414
-00048e 0414
-00048f 0414
-000490 0414
-000491 0414
-000492 0414
-000493 0414
-000494 0414
-000495 0414
-000496 0414
-000497 0414
-000498 0414
-000499 0414
-00049a 0414
-00049b 0414
-00049c 0414
-00049d 0414
-00049e 0414
-00049f 0414
-0004a0 0414
-0004a1 0414
-0004a2 0414
-0004a3 0414
-0004a4 0414
-0004a5 0414
-0004a6 0414
-0004a7 0414
-0004a8 0414
-0004a9 0414
-0004aa 0414
-0004ab 0414
-0004ac 0414
-0004ad 0414
-0004ae 0414
-0004af 0414
-0004b0 0414
-0004b1 0414
-0004b2 0414
-0004b3 0414
-0004b4 0414
-0004b5 0414
-0004b6 0414
-0004b7 0414
-0004b8 0414
-0004b9 0414
-0004ba 0414
-0004bb 0414
-0004bc 0414
-0004bd 0414
-0004be 0414
-0004bf 0414
-0004c0 0414
-0004c1 0414
-0004c2 0414
-0004c3 0414
-0004c4 0414
-0004c5 0414
-0004c6 0414
-0004c7 0414
-0004c8 0414
-0004c9 0414
-0004ca 0414
-0004cb 0414
-0004cc 0414
-0004cd 0414
-0004ce 0414
-0004cf 0414
-0004d0 0414
-0004d1 0414
-0004d2 0414
-0004d3 0414
-0004d4 0414
-0004d5 0414
-0004d6 0414
-0004d7 0414
-0004d8 0414
-0004d9 0414
-0004da 0414
-0004db 0414
-0004dc 0414
-0004dd 0414
-0004de 0414
-0004df 0414
-0004e0 0414
-0004e1 0414
-0004e2 0414
-0004e3 0414
-0004e4 0414
-0004e5 0414
-0004e6 0414
-0004e7 0414
-0004e8 0416
-0004e9 0414
-0004ea 0414
-0004eb 0414
-0004ec 0414
-0004ed 0414
-0004ee 0414
-0004ef 0414
-0004f0 0414
-0004f1 0414
-0004f2 0414
-0004f3 0414
-0004f4 0414
-0004f5 0414
-0004f6 0414
-0004f7 0414
-0004f8 0414
-0004f9 0414
-0004fa 0414
-0004fb 0414
-0004fc 0414
-0004fd 0414
-0004fe 0414
-0004ff 0414
-000500 0414
-000501 0414
-000502 0414
-000503 0414
-000504 0414
-000505 0414
-000506 0414
-000507 0414
-000508 0414
-000509 0414
-00050a 0414
-00050b 0414
-00050c 0414
-00050d 0414
-00050e 0414
-00050f 0414
-000510 0414
-000511 0414
-000512 0414
-000513 0414
-000514 0414
-000515 0414
-000516 0414
-000517 0414
-000518 0414
-000519 0414
-00051a 0414
-00051b 0414
-00051c 0414
-00051d 0414
-00051e 0414
-00051f 0414
-000520 0414
-000521 0414
-000522 0414
-000523 0414
-000524 0414
-000525 0414
-000526 0414
-000527 0414
-000528 0414
-000529 0414
-00052a 0414
-00052b 0414
-00052c 0414
-00052d 0414
-00052e 0414
-00052f 0414
-000530 0414
-000531 0414
-000532 0414
-000533 0414
-000534 0414
-000535 0414
-000536 0414
-000537 0414
-000538 0414
-000539 0414
-00053a 0414
-00053b 0414
-00053c 0414
-00053d 0414
-00053e 0414                      
+0004ac 0416
+0004ad 0415
+0004ae 0415
+0004af 0415
+0004b0 0415
+0004b1 0415
+0004b2 0415
+0004b3 0415
+0004b4 0415
+0004b5 0415
+0004b6 0415
+0004b7 0415
+0004b8 0415
+0004b9 0415
+0004ba 0415
+0004bb 0415
+0004bc 0415
+0004bd 0415
+0004be 0415
+0004bf 0415
+0004c0 0415
+0004c1 0415
+0004c2 0415
+0004c3 0415
+0004c4 0415
+0004c5 0415
+0004c6 0415
+0004c7 0415
+0004c8 0415
+0004c9 0415
+0004ca 0415
+0004cb 0415
+0004cc 0415
+0004cd 0415
+0004ce 0415
+0004cf 0415
+0004d0 0415
+0004d1 0415
+0004d2 0415
+0004d3 0415
+0004d4 0415
+0004d5 0415
+0004d6 0415
+0004d7 0415
+0004d8 0415
+0004d9 0415
+0004da 0415
+0004db 0415
+0004dc 0415
+0004dd 0415
+0004de 0415
+0004df 0415
+0004e0 0415
+0004e1 0415
+0004e2 0415
+0004e3 0415
+0004e4 0415
+0004e5 0415
+0004e6 0415
+0004e7 0415
+0004e8 0415
+0004e9 0415
+0004ea 0415
+0004eb 0415
+0004ec 0415
+0004ed 0415
+0004ee 0415
+0004ef 0415
+0004f0 0415
+0004f1 0415
+0004f2 0415
+0004f3 0415
+0004f4 0415
+0004f5 0415
+0004f6 0415
+0004f7 0415
+0004f8 0415
+0004f9 0415
+0004fa 0415
+0004fb 0415
+0004fc 0415
+0004fd 0415
+0004fe 0415
+0004ff 0415
+000500 0415
+000501 0415
+000502 0415
+000503 0415
+000504 0415
+000505 0415
+000506 0415
+000507 0415
+000508 0415
+000509 0415
+00050a 0415
+00050b 0415
+00050c 0415
+00050d 0415
+00050e 0415
+00050f 0415
+000510 0415
+000511 0415
+000512 0415
+000513 0415
+000514 0415
+000515 0415
+000516 0415
+000517 0415
+000518 0415
+000519 0415
+00051a 0415
+00051b 0415
+00051c 0415
+00051d 0415
+00051e 0415
+00051f 0415
+000520 0415
+000521 0415
+000522 0415
+000523 0415
+000524 0415
+000525 0415
+000526 0415
+000527 0415
+000528 0415
+000529 0415
+00052a 0415
+00052b 0415
+00052c 0415
+00052d 0415
+00052e 0415
+00052f 0415
+000530 0415
+000531 0415
+000532 0415
+000533 0415
+000534 0415
+000535 0415
+000536 0415
+000537 0415
+000538 0415
+000539 0415
+00053a 0415
+00053b 0415
+00053c 0415
+00053d 0415
+00053e 0415
+00053f 0415
+000540 0415
+000541 0415
+000542 0415
+000543 0415
+000544 0415
+000545 0415
+000546 0415
+000547 0415
+000548 0415
+000549 0415
+00054a 0415
+00054b 0415
+00054c 0415
+00054d 0415
+00054e 0415
+00054f 0415
+000550 0415
+000551 0415
+000552 0415
+000553 0415
+000554 0415
+000555 0417
+000556 0415
+000557 0415
+000558 0415
+000559 0440
+00055a 0415
+00055b 0415
+00055c 0415
+00055d 0415
+00055e 0415
+00055f 0415
+000560 0415
+000561 0415
+000562 0415
+000563 0415
+000564 0415
+000565 0415
+000566 0415
+000567 0415
+000568 0415
+000569 0415
+00056a 0415
+00056b 0415
+00056c 0415
+00056d 0415
+00056e 0415
+00056f 0415
+000570 0415
+000571 0415
+000572 0415
+000573 0415
+000574 0415
+000575 0415
+000576 0415
+000577 0415
+000578 0415
+000579 0415
+00057a 0415
+00057b 0415
+00057c 0415
+00057d 0415
+00057e 0415
+00057f 0415
+000580 0415
+000581 0415
+000582 0415
+000583 0415
+000584 0415
+000585 0415
+000586 0415
+000587 0415
+000588 0415
+000589 0415
+00058a 0415
+00058b 0415
+00058c 0415
+00058d 0415
+00058e 0415
+00058f 0415
+000590 0415
+000591 0415
+000592 0415
+000593 0415
+000594 0415
+000595 0415
+000596 0415
+000597 0415
+000598 0415
+000599 0415
+00059a 0415
+00059b 0415
+00059c 0415
+00059d 0415
+00059e 0415
+00059f 0415
+0005a0 0415
+0005a1 0415
+0005a2 0415
+0005a3 0415
+0005a4 0415
+0005a5 0415
+0005a6 0415
+0005a7 0415
+0005a8 0415
+0005a9 0415
+0005aa 0415
+0005ab 0415                      
                                  init:
                                  	; TODO: Copy RAMcode to SRAM
-00053f e0f0                      	ldi ZH, HIGH(RAMcodeUNLOADED)
-000540 e0eb                      	ldi ZL, LOW(RAMcodeUNLOADED)
+0005ac e0f0                      	ldi ZH, HIGH(RAMcodeUNLOADED)
+0005ad e0eb                      	ldi ZL, LOW(RAMcodeUNLOADED)
                                  
-000541 e0b1                      	ldi XH, HIGH(SRAM_START)
-000542 e0a0                      	ldi XL, LOW(SRAM_START)
+0005ae e0b1                      	ldi XH, HIGH(SRAM_START)
+0005af e0a0                      	ldi XL, LOW(SRAM_START)
                                  
-000543 e0d8                      	ldi YH, HIGH(SRAM_END)
-000544 efcf                      	ldi YL, LOW(SRAM_END)
+0005b0 e0d8                      	ldi YH, HIGH(SRAM_END)
+0005b1 efcf                      	ldi YL, LOW(SRAM_END)
                                  
-000545 0fee                      	LSL ZL
-000546 1fff                      	ROL ZH
+0005b2 0fee                      	LSL ZL
+0005b3 1fff                      	ROL ZH
                                  
                                  ram_copy_loop:
-000547 9005                      	lpm r0, Z+
-000548 920d                      	st X+, r0
+0005b4 9005                      	lpm r0, Z+
+0005b5 920d                      	st X+, r0
                                  
-000549 17bd                      	cp XH, YH
-00054a f7e1                      	brne ram_copy_loop
-00054b 17ac                      	cp XL, YL
-00054c f7d1                      	brne ram_copy_loop
+0005b6 17bd                      	cp XH, YH
+0005b7 f7e1                      	brne ram_copy_loop
+0005b8 17ac                      	cp XL, YL
+0005b9 f7d1                      	brne ram_copy_loop
                                  
                                  ram_copy_done:
                                  
                                  
-00054d 940c 054f                 	jmp _start
+0005ba 940c 05bc                 	jmp _start
                                  
                                  _start:
-00054f 2422                      	clr AR ; clear A register
-000550 2433                      	clr XR ; clear X register
-000551 2444                      	clr YR ; clear Y register
-000552 27ff                      	clr ZH ; clear PC HIGH register
-000553 27ee                      	clr ZL ; clear PC LOW register
-000554 27bb                      	CLR XH
-000555 27aa                      	CLR XL
-000556 27dd                      	CLR YH
-000557 27cc                      	CLR YL
-000558 2400                      	CLR R0
+0005bc 2422                      	clr AR ; clear A register
+0005bd 2433                      	clr XR ; clear X register
+0005be 2444                      	clr YR ; clear Y register
+0005bf 27ff                      	clr ZH ; clear PC HIGH register
+0005c0 27ee                      	clr ZL ; clear PC LOW register
+0005c1 27bb                      	CLR XH
+0005c2 27aa                      	CLR XL
+0005c3 27dd                      	CLR YH
+0005c4 27cc                      	CLR YL
+0005c5 2400                      	CLR R0
                                  
                                  	; 1. Fetch instruction from PC
                                  	; 2. Decode instruction
@@ -2774,70 +2881,67 @@ c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(12): warning: 
                                  
                                  fetch_setup:
                                  	;we want the code to start in ROM. 
-000559 e0f8                      	LDI ZH, HIGH(ROM_START_EMU)
-00055a e0e0                      	LDI ZL, LOW(ROM_START_EMU)
-00055b e058                      	LDI TEMPPCH, HIGH(ROM_START_EMU) 
-00055c e040                      	LDI TEMPPCL, LOW(ROM_START_EMU)
+0005c6 e0f8                      	LDI ZH, HIGH(ROM_START_EMU)
+0005c7 e0e0                      	LDI ZL, LOW(ROM_START_EMU)
+0005c8 e058                      	LDI TEMPPCH, HIGH(ROM_START_EMU) 
+0005c9 e040                      	LDI TEMPPCL, LOW(ROM_START_EMU)
                                  
                                  fetch:
-00055d 0000                      	nop
+0005ca 0000                      	nop
                                  
-                                 	;mov ZL, TEMPPCL
-                                 	;mov ZH, TEMPPCH
-                                 
-00055e 30f8
-00055f f434
-000560 e001
-000561 0ff0
-000562 8040
-000563 1bf0
-000564 940c 057d
-000566 31f0
-000567 f47c
-000568 e008
-000569 e01b
-00056a e024
-00056b 2f3e
-00056c 2f4f
-00056d 1bf0
-00056e 0f11
-00056f 1f22
-000570 0fe1
-000571 1ff2
-000572 9044
-000573 2fe3
-000574 2ff4
-000575 940c 057d
-000577 31f4
-000578 f40c
-000579 9598
-00057a 9598
-00057b 940c 057d
-00057d 0000                      	dereferencer INSTRUCTION
-00057e e002                      	ldi r16, 2
-00057f 9e40                      	mul INSTRUCTION, r16
+0005cb 30f8
+0005cc f434
+0005cd e001
+0005ce 0ff0
+0005cf 8040
+0005d0 1bf0
+0005d1 940c 05ea
+0005d3 31f0
+0005d4 f47c
+0005d5 e008
+0005d6 e01b
+0005d7 e024
+0005d8 2f3e
+0005d9 2f4f
+0005da 1bf0
+0005db 0f11
+0005dc 1f22
+0005dd 0fe1
+0005de 1ff2
+0005df 9044
+0005e0 2fe3
+0005e1 2ff4
+0005e2 940c 05ea
+0005e4 31f4
+0005e5 f40c
+0005e6 9598
+0005e7 9598
+0005e8 940c 05ea
+0005ea 0000                      	dereferencer INSTRUCTION
+0005eb e002                      	ldi r16, 2
+0005ec 9e40                      	mul INSTRUCTION, r16
                                  
                                  	;we have the pointer to the instruction.
                                  	;preserve the old pc
                                  	;we need to add to Z for the offset. 
-000580 2f4e                      	mov TEMPPCL, ZL
-000581 2f5f                      	mov TEMPPCH, ZH
+0005ed 2f4e                      	mov TEMPPCL, ZL
+0005ee 2f5f                      	mov TEMPPCH, ZH
                                  
                                  	;calcutate the pointer for getting the instruction's address. 
-000582 e7ee                      	LDI ZL, LOW(instructionMapping)*2
-000583 e0f8                      	LDI ZH, HIGH(instructionMapping)*2
-000584 0de0                      	add zl, r0
-000585 1df1                      	adc zh, r1
+0005ef e5e8                      	LDI ZL, LOW(instructionMapping*2)
+0005f0 e0f9                      	LDI ZH, HIGH(instructionMapping*2)
+0005f1 0de0                      	add zl, r0
+0005f2 1df1                      	adc zh, r1
                                  	
                                  	;grab the instruction address and store it in Z
-000586 9005                      	lpm R0, Z+
-000587 9014                      	lpm r1, z
-000588 2de0                      	mov zl, r0
-000589 2df1                      	mov zh, r1
+0005f3 9005                      	lpm R0, Z+
+0005f4 9014                      	lpm r1, z
+0005f5 2de0                      	mov zl, r0
+0005f6 2df1                      	mov zh, r1
                                  
-00058a 9509                      	icall
+0005f7 9509                      	icall
                                  
-00058b cfd1                          rjmp fetch
+0005f8 cfd1                          rjmp fetch
                                  
                                  
                                  
@@ -2858,39 +2962,39 @@ counted separately from r26..r31 here.
 .dseg memory usage only counts static data declared with .byte
 
 "ATmega328P" register use summary:
-x  :   1 y  :   0 z  :   7 r0 :   6 r1 :   3 r2 :   3 r3 :   1 r4 :   4 
+x  :   1 y  :   0 z  :  13 r0 :   6 r1 :   3 r2 :   5 r3 :   1 r4 :   4 
 r5 :   0 r6 :   0 r7 :   0 r8 :   0 r9 :   0 r10:   0 r11:   0 r12:   0 
-r13:   0 r14:   0 r15:   0 r16:  16 r17:   6 r18:   6 r19:   4 r20:   8 
-r21:   4 r22:   0 r23:   0 r24:   0 r25:   0 r26:   3 r27:   3 r28:   3 
-r29:   3 r30:  18 r31:  30 
-Registers used: 19 out of 35 (54.3%)
+r13:   0 r14:   0 r15:   0 r16:  35 r17:  15 r18:  15 r19:  10 r20:  16 
+r21:   6 r22:   3 r23:   3 r24:   0 r25:   0 r26:   3 r27:   3 r28:   3 
+r29:   3 r30:  33 r31:  63 
+Registers used: 21 out of 35 (60.0%)
 
 "ATmega328P" instruction use summary:
-.lds  :   0 .sts  :   0 adc   :   3 add   :   5 adiw  :   2 and   :   0 
+.lds  :   0 .sts  :   0 adc   :   6 add   :  11 adiw  :   5 and   :   0 
 andi  :   0 asr   :   0 bclr  :   0 bld   :   0 brbc  :   0 brbs  :   0 
-brcc  :   0 brcs  :   0 break :   6 breq  :   0 brge  :   6 brhc  :   0 
+brcc  :   0 brcs  :   0 break :  12 breq  :   0 brge  :  15 brhc  :   0 
 brhs  :   0 brid  :   0 brie  :   0 brlo  :   0 brlt  :   0 brmi  :   0 
 brne  :   2 brpl  :   0 brsh  :   0 brtc  :   0 brts  :   0 brvc  :   0 
 brvs  :   0 bset  :   0 bst   :   0 call  :   0 cbi   :   0 cbr   :   0 
 clc   :   0 clh   :   0 cli   :   0 cln   :   0 clr   :  10 cls   :   0 
 clt   :   0 clv   :   0 clz   :   0 com   :   0 cp    :   2 cpc   :   0 
-cpi   :   6 cpse  :   0 dec   :   0 eor   :   0 fmul  :   0 fmuls :   0 
-fmulsu:   0 icall :   1 ijmp  :   0 in    :   0 inc   :   0 jmp   :   8 
-ld    :   2 ldd   :   0 ldi   :  21 lds   :   0 lpm   :   8 lsl   :   3 
-lsr   :   0 mov   :  18 movw  :   0 mul   :   1 muls  :   0 mulsu :   0 
-neg   :   0 nop   :   3 or    :   0 ori   :   0 out   :   0 pop   :   0 
-push  :   0 rcall :   0 ret   :   1 reti  :   0 rjmp  :   1 rol   :   3 
+cpi   :  15 cpse  :   0 dec   :   0 eor   :   0 fmul  :   0 fmuls :   0 
+fmulsu:   0 icall :   1 ijmp  :   0 in    :   0 inc   :   0 jmp   :  17 
+ld    :   5 ldd   :   0 ldi   :  33 lds   :   0 lpm   :  14 lsl   :   6 
+lsr   :   0 mov   :  38 movw  :   0 mul   :   1 muls  :   0 mulsu :   0 
+neg   :   0 nop   :   6 or    :   0 ori   :   0 out   :   0 pop   :   0 
+push  :   0 rcall :   0 ret   :   2 reti  :   0 rjmp  :   1 rol   :   6 
 ror   :   0 sbc   :   0 sbci  :   0 sbi   :   0 sbic  :   0 sbis  :   0 
 sbiw  :   0 sbr   :   0 sbrc  :   0 sbrs  :   0 sec   :   0 seh   :   0 
 sei   :   0 sen   :   0 ser   :   0 ses   :   0 set   :   0 sev   :   0 
 sez   :   0 sleep :   0 spm   :   0 st    :   1 std   :   0 sts   :   0 
-sub   :   4 subi  :   0 swap  :   0 tst   :   0 wdr   :   0 
+sub   :  10 subi  :   0 swap  :   0 tst   :   0 wdr   :   0 
 Instructions used: 23 out of 113 (20.4%)
 
 "ATmega328P" memory use summary [bytes]:
 Segment   Begin    End      Code   Data   Used    Size   Use%
 ---------------------------------------------------------------
-[.cseg] 0x000000 0x000b18    244   2596   2840   32768   8.7%
+[.cseg] 0x000000 0x000bf2    460   2598   3058   32768   9.3%
 [.dseg] 0x000100 0x000900      0   2048   2048    2048 100.0%
 [.eseg] 0x000000 0x000003      0      3      3    1024   0.3%
 

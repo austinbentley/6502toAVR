@@ -105,7 +105,7 @@ TAY_implied:
 ;LDA_immediate:
 TAX_implied:
 LDY_absolute:
-LDA_absolute:
+;LDA_absolute:
 LDX_absolute:
 BCS_relative:
 LDA_indirect_Y:

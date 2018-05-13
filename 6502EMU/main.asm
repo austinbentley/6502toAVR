@@ -93,8 +93,8 @@ fetch:
 	mov TEMPPCH, ZH
 
 	;calcutate the pointer for getting the instruction's address. 
-	LDI ZL, LOW(instructionMapping)*2
-	LDI ZH, HIGH(instructionMapping)*2
+	LDI ZL, LOW(instructionMapping*2)
+	LDI ZH, HIGH(instructionMapping*2)
 	add zl, r0
 	adc zh, r1
 	

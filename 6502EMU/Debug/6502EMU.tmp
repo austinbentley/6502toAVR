@@ -135,7 +135,6 @@
   <TAY_implied><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/unimplemented_instructions.asm</FILE><LINE>104</LINE></TAY_implied>
   <TAX_implied><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/unimplemented_instructions.asm</FILE><LINE>106</LINE></TAX_implied>
   <LDY_absolute><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/unimplemented_instructions.asm</FILE><LINE>107</LINE></LDY_absolute>
-  <LDA_absolute><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/unimplemented_instructions.asm</FILE><LINE>108</LINE></LDA_absolute>
   <LDX_absolute><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/unimplemented_instructions.asm</FILE><LINE>109</LINE></LDX_absolute>
   <BCS_relative><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/unimplemented_instructions.asm</FILE><LINE>110</LINE></BCS_relative>
   <LDA_indirect_Y><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/unimplemented_instructions.asm</FILE><LINE>111</LINE></LDA_indirect_Y>
@@ -189,6 +188,7 @@
   <INVALID_OPCODE><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/unimplemented_instructions.asm</FILE><LINE>159</LINE></INVALID_OPCODE>
   <BRK_implied><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/BRK.asm</FILE><LINE>8</LINE></BRK_implied>
   <LDA_immediate><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/LDA.asm</FILE><LINE>12</LINE></LDA_immediate>
+  <LDA_absolute><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/LDA.asm</FILE><LINE>24</LINE></LDA_absolute>
   <instructionMapping><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\instruction_mappings.asm</FILE><LINE>9</LINE></instructionMapping>
   <ram_copy_loop><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm</FILE><LINE>38</LINE></ram_copy_loop>
   <ram_copy_done><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm</FILE><LINE>47</LINE></ram_copy_done>
