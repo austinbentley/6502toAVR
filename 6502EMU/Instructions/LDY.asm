@@ -62,7 +62,7 @@ LDY_absolute:
 	ADIW ZH:ZL, 1
 	RET
 
-LDY_zpg_Y:
+LDY_zpg_X:
 	swapPCwithTEMPPC
 
 	ADIW ZH:ZL, 1
@@ -73,7 +73,7 @@ LDY_zpg_Y:
 	MOV ZL, R24
 	CLR ZH
 
-	add zl, YR
+	add zl, XR
 	clc
 
 	dereferencer YR
@@ -84,7 +84,7 @@ LDY_zpg_Y:
 
 	RET
 
-LDY_absolute_Y:
+LDY_absolute_X:
 	swapPCwithTEMPPC
 
 	ADIW ZH:ZL, 1
@@ -101,7 +101,7 @@ LDY_absolute_Y:
 	mov zh, r23
 
 	clr r26
-	add zl, YR
+	add zl, XR
 	adc zh, r26
 
 	dereferencer YR
