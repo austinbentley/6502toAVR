@@ -4,7 +4,7 @@
  *  Created: 5/13/2018 3:04:30 PM
  *   Author: ROTP
  */ 
- CLV_implied:
+ CLV_implied: ;UNTESTED
 	swapPCwithTEMPPC
 
 	CBR SR, OVERFLOW_FLAG

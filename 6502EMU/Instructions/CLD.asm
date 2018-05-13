@@ -5,7 +5,7 @@
  *   Author: ROTP
  */ 
  
- CLD_implied:
+ CLD_implied: ;UNTESTED
 	swapPCwithTEMPPC
 
 	CBR SR, DECIMAL_FLAG

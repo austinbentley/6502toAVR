@@ -147,23 +147,6 @@ CMP_absolute:
 	BRLT CMP_absolute_lt
 	BREQ CMP_absolute_eq
 
-
-	/*
-	ADIW ZH:ZL, 1
-	MOV R22, ZL
-	MOV R23, ZH
-
-	dereferencer r24
-	MOV ZL, R24
-	CLR ZH
-
-
-	dereferencer R25
-	cp AR, r25
-
-	BRLT CMP_absolute_lt
-	BREQ CMP_absolute_eq*/
-
 CMP_absolute_gt:
 	;AR > R22 => Z = 0, C = 1
 	CBR SR, ZERO_FLAG
@@ -181,6 +164,103 @@ CMP_absolute_eq:
 	;JMP CMP_absolute_ret
 
 CMP_absolute_ret:
+	mov ZL, R24 ;restore Z
+	mov ZH, R25
+	ADIW ZH:ZL, 1
+	RET
+
+
+CMP_absolute_X: ;UNTESTED
+	swapPCwithTEMPPC
+
+
+	ADIW ZH:ZL, 1
+	dereferencer r23 ;grab LO
+	ADIW ZH:ZL, 1
+	dereferencer r22 ;grab HI
+
+	mov r24, ZL ;preserve Z
+	mov r25, ZH
+
+	MOV ZH, R22 ;put new data in Z
+	MOV ZL, R23
+
+	CLR R26
+	ADD ZL, XR
+	ADC ZH, R26
+
+	dereferencer r26
+	cp AR, r26
+
+	BRLT CMP_absolute_X_lt
+	BREQ CMP_absolute_X_eq
+
+CMP_absolute_X_gt:
+	;AR > R22 => Z = 0, C = 1
+	CBR SR, ZERO_FLAG
+	SBR SR, CARRY_FLAG
+	JMP CMP_absolute_X_ret
+CMP_absolute_X_lt:
+	;AR < r22 => Z = 0, C = 0
+	CBR SR, ZERO_FLAG
+	CBR SR, CARRY_FLAG
+	JMP CMP_absolute_X_ret
+CMP_absolute_X_eq:
+	;AR = R22 => Z = 1, C = 1
+	SBR SR, ZERO_FLAG
+	SBR SR, CARRY_FLAG
+	;JMP CMP_absolute_X_ret
+
+CMP_absolute_X_ret:
+	mov ZL, R24 ;restore Z
+	mov ZH, R25
+	ADIW ZH:ZL, 1
+	RET
+
+
+
+CMP_absolute_Y: ;UNTESTED
+	swapPCwithTEMPPC
+
+
+	ADIW ZH:ZL, 1
+	dereferencer r23 ;grab LO
+	ADIW ZH:ZL, 1
+	dereferencer r22 ;grab HI
+
+	mov r24, ZL ;preserve Z
+	mov r25, ZH
+
+	MOV ZH, R22 ;put new data in Z
+	MOV ZL, R23
+
+	CLR R26
+	ADD ZL, YR
+	ADC ZH, R26
+
+	dereferencer r26
+	cp AR, r26
+
+	BRLT CMP_absolute_Y_lt
+	BREQ CMP_absolute_Y_eq
+
+CMP_absolute_Y_gt:
+	;AR > R22 => Z = 0, C = 1
+	CBR SR, ZERO_FLAG
+	SBR SR, CARRY_FLAG
+	JMP CMP_absolute_Y_ret
+CMP_absolute_Y_lt:
+	;AR < r22 => Z = 0, C = 0
+	CBR SR, ZERO_FLAG
+	CBR SR, CARRY_FLAG
+	JMP CMP_absolute_Y_ret
+CMP_absolute_Y_eq:
+	;AR = R22 => Z = 1, C = 1
+	SBR SR, ZERO_FLAG
+	SBR SR, CARRY_FLAG
+	;JMP CMP_absolute_Y_ret
+
+CMP_absolute_Y_ret:
 	mov ZL, R24 ;restore Z
 	mov ZH, R25
 	ADIW ZH:ZL, 1
