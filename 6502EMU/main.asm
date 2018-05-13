@@ -18,14 +18,15 @@ start: ;to avoid overwriting the interrupt table with our includes!
 .include "dereferencer.asm"
 .include "Instructions/unimplemented_instructions.asm"
 .include "Instructions/BRK.asm"
-.include "Instructions/CMP.asm"
 .include "Instructions/CLC.asm"
 .include "Instructions/CLD.asm"
 .include "Instructions/CLI.asm"
 .include "Instructions/CLV.asm"
+.include "Instructions/CMP.asm"
 .include "Instructions/CPX.asm"
 .include "Instructions/CPY.asm"
 .include "Instructions/INX.asm"
+.include "Instructions/INY.asm"
 .include "Instructions/LDA.asm"
 .include "Instructions/LDX.asm"
 .include "Instructions/LDY.asm"
@@ -33,6 +34,14 @@ start: ;to avoid overwriting the interrupt table with our includes!
 .include "Instructions/SED.asm"
 .include "Instructions/SEI.asm"
 .include "Instructions/STA.asm"
+.include "Instructions/STX.asm"
+.include "Instructions/STY.asm"
+.include "Instructions/TAX.asm"
+.include "Instructions/TAY.asm"
+.include "Instructions/TXA.asm"
+.include "Instructions/TYA.asm"
+
+
 
 
 .include "instruction_mappings.asm"

@@ -82,3 +82,57 @@ dereferencer_return:
 	;ret
 
 .ENDMACRO
+
+.MACRO dereferencer_write
+;dereferencer_write:
+dereferencer_write_SRAM:
+	; IF ZH <= HIGH SRAM_END_EMU then RAM
+	;	ZH += HIGH(SRAM_START)
+	;   write data into SRAM data
+	;   ZH -= HIGH(SRAM_START)
+	CPI ZH, HIGH(SRAM_END_EMU)+1
+	BRGE dereferencer_write_ROM
+
+	LDI r16, HIGH(SRAM_START)
+
+	ADD ZH, r16
+	
+	ST Z, @0
+	;ST Z, AR
+
+	SUB ZH, r16
+	
+	;RET 
+	JMP dereferencer_write_return
+
+dereferencer_write_ROM:
+	; IF ZH <= ROM_END then ROM
+	;	ZH -= HIGH(ROM_START_EMU)
+	;   write data into ROM data
+	;   ZH += HIGH(ROM_START_EMU)
+	CPI ZH, HIGH(ROM_END_EMU)+1 
+	BRGE dereferencer_write_EEPROM
+
+	JMP dereferencer_write_BREAK
+	
+dereferencer_write_EEPROM:
+	; IF ZH <= EEPROM_END then EEPROM
+	;	ZH -= HIGH(EEPROM_START_EMU)
+	;   write data into EEPROM data
+	;   ZH += HIGH(EEPROM_START_EMU
+	; IF ZH > EEPROM_END then CRASH
+	CPI ZH, HIGH(EEPROM_END_EMU)+1
+	BRGE dereferencer_write_BREAK
+
+	BREAK
+
+dereferencer_write_BREAK:
+	BREAK
+
+	;RET
+	JMP dereferencer_write_return
+dereferencer_write_return:
+	
+	NOP
+	;ret
+.ENDMACRO
