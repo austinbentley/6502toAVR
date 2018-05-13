@@ -1,0 +1,13 @@
+1. Code all instructions. 
+2. Code script which will compile assembler and convert to a .asm file. 
+
+ASM format with headers will turn something like: 
+
+main    .org   $c000   ; start at free RAM
+        ldx    #0
+...
+
+into:
+00C0 BE00 ....
+
+So, first few bytes every x bytes is probably the header. 
