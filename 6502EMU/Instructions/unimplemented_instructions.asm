@@ -110,10 +110,10 @@ LDX_absolute:
 BCS_relative:
 LDA_indirect_Y:
 LDY_zpg_X:
-LDA_zpg_X:
+;LDA_zpg_X:
 LDX_zpg_Y:
 CLV_implied:
-LDA_absolute_Y:
+;LDA_absolute_Y:
 TSX_implied:
 LDY_absolute_X:
 ;LDA_absolute_X:

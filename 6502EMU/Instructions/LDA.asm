@@ -64,7 +64,28 @@ LDA_absolute:
 
 
 ;LDA_indirect_Y:
-;LDA_zpg_X
+
+LDA_zpg_X:
+	swapPCwithTEMPPC
+
+	ADIW ZH:ZL, 1
+	MOV R22, ZL
+	MOV R23, ZH
+
+	dereferencer r24
+	MOV ZL, R24
+	CLR ZH
+
+	add zl, XR
+	clc
+
+	dereferencer AR
+
+	MOV ZL, R22
+	MOV ZH, R23
+	ADIW ZH:ZL, 1
+
+	RET
 
 LDA_absolute_Y:
 	swapPCwithTEMPPC
