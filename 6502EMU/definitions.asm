@@ -5,9 +5,12 @@
  *   Author: ROTP
  */ 
 
- .DEF AR = R0
- .DEF XR = R1
- .DEF YR = R2
- .DEF SP = R3
+ .DEF AR = R2
+ .DEF XR = R3
+ .DEF YR = R4
+ .DEF SP = R5
+
+ .DEF TEMPPCL = R20
+ .DEF TEMPPCH = R21
 
  .DEF INSTRUCTION = R4

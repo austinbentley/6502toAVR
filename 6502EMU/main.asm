@@ -13,9 +13,12 @@ start: ;to avoid overwriting the interrupt table with our includes!
 
 .include "programcode.asm"
 .include "definitions.asm"
-.include "dereferencer.asm"
-.include "Instructions/LDA.asm"
+.include "general_macros.asm"
 .include "memorymap.asm"
+.include "dereferencer.asm"
+.include "Instructions/unimplemented_instructions.asm"
+.include "Instructions/LDA.asm"
+.include "instruction_mappings.asm"
 
 init:
 	; TODO: Copy RAMcode to SRAM
@@ -51,6 +54,11 @@ _start:
 	clr YR ; clear Y register
 	clr ZH ; clear PC HIGH register
 	clr ZL ; clear PC LOW register
+	CLR XH
+	CLR XL
+	CLR YH
+	CLR YL
+	CLR R0
 
 	; 1. Fetch instruction from PC
 	; 2. Decode instruction
@@ -67,11 +75,36 @@ fetch_setup:
 	;we want the code to start in ROM. 
 	LDI ZH, HIGH(ROM_START_EMU)
 	LDI ZL, LOW(ROM_START_EMU)
+	LDI TEMPPCH, HIGH(ROM_START_EMU) 
+	LDI TEMPPCL, LOW(ROM_START_EMU)
 
 fetch:
 	nop
 
+	mov ZL, TEMPPCL
+	mov ZH, TEMPPCH
+
 	dereferencer INSTRUCTION
+	ldi r16, 2
+	mul INSTRUCTION, r16
+
+	;we have the pointer to the instruction.
+	;preserve the old pc
+	;we need to add to Z for the offset. 
+	mov TEMPPCL, ZL
+	mov TEMPPCH, ZH
+
+	LDI ZL, LOW(instructionMapping)*2
+	LDI ZH, HIGH(instructionMapping)*2
+	add zl, r0
+	adc zh, r1
+	
+	lpm R0, Z+
+	lpm r1, z
+	mov zl, r0
+	mov zh, r1
+
+	icall
 
     rjmp fetch
 

@@ -8,6 +8,8 @@
 
 
 LDA_immediate: ;LDA #$09 => A9 09
+	swapPCwithTEMPPC
+
 	ADIW ZH:ZL, 1 ;grab the next byte 
 	
 	dereferencer AR

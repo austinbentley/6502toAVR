@@ -19,7 +19,7 @@ dereferencer_SRAM_load:
 
 	ADD ZH, r16
 	
-	LD AR, Z
+	LD @0, Z
 
 	SUB ZH, r16
 	
@@ -47,7 +47,7 @@ dereferencer_ROM_load:
 	ADD ZL, R17
 	ADC ZH, R18
 
-	LPM AR, Z ;want 0x817
+	LPM @0, Z ;want 0x817
 
 	; Z is no longer in proper PC, so set it back to proper PC format. 
 	; TODO: replace this code with a swap routine? no clue which is faster (yet.)
