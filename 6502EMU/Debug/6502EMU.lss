@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.7  c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm Sun May 13 00:47:21 2018
+AVRASM ver. 2.2.7  c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm Sun May 13 01:35:31 2018
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m328pdef.inc'
 c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(14): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\programcode.asm'
@@ -1002,7 +1002,7 @@ c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(18): Including
                                  ;
                                  
                                  start: ;to avoid overwriting the interrupt table with our includes!
-000000 940c 0451                 	jmp init
+000000 940c 0434                 	jmp init
                                  
                                  
 000002 0000
@@ -2080,7 +2080,7 @@ c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(12): warning: 
                                   *   Author: ROTP
                                   */ 
                                  
-                                  
+                                 /*
                                  .MACRO dereferencer
                                  	;328p memory starts at 0x0100 and goes up to 0x8ff. 
                                  	;6502 memory starts at 0x0000.
@@ -2152,7 +2152,7 @@ c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(12): warning: 
                                  
                                  	;RET
                                  	JMP dereferencer_return
-                                 
+                                 	h
                                  dereferencer_EEPROM_load:
                                  	; IF ZH <= EEPROM_END then EEPROM
                                  	;	ZH -= HIGH(EEPROM_START_EMU)
@@ -2169,9 +2169,80 @@ c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(12): warning: 
                                  
                                  	;RET
                                  	JMP dereferencer_return
-                                 
                                  dereferencer_return:
                                  .ENDMACRO
+                                 */
+                                 
+                                 .MACRO dereferencer
+                                 dereferencer_SRAM_load:
+                                 	; IF ZH <= HIGH SRAM_END_EMU then RAM
+                                 	;	ZH += HIGH(SRAM_START)
+                                 	;   load data into reg
+                                 	;   ZH -= HIGH(SRAM_START)
+                                 	CPI ZH, HIGH(SRAM_END_EMU)+1
+                                 	BRGE dereferencer_ROM_load
+                                 
+                                 	LDI r16, HIGH(SRAM_START)
+                                 
+                                 	ADD ZH, r16
+                                 	
+                                 	LD @0, Z
+                                 
+                                 	SUB ZH, r16
+                                 	
+                                 	;RET 
+                                 	JMP dereferencer_return
+                                 
+                                 dereferencer_ROM_load:
+                                 	; IF ZH <= ROM_END then ROM
+                                 	;	ZH -= HIGH(ROM_START_EMU)
+                                 	;   load data into reg from ROM data
+                                 	;   ZH += HIGH(ROM_START_EMU)
+                                 	CPI ZH, HIGH(ROM_END_EMU)+1 ;
+                                 	BRGE dereferencer_EEPROM_load
+                                 
+                                 	LDI r16, HIGH(ROM_START_EMU)
+                                 	LDI r17, LOW(ROMcode)
+                                 	LDI r18, HIGH(ROMcode)
+                                 	SUB ZH, r16 
+                                 
+                                 	;Z now has the proper index of the data we want from our large ROM "array". We need to add the array ptr to Z now and then multiply by two
+                                 	LSL R17
+                                 	ROL R18
+                                 	ADD ZL, R17
+                                 	ADC ZH, R18
+                                 
+                                 	LPM @0, Z ;want 0x817
+                                 
+                                 	; Z is no longer in proper PC, so set it back to proper PC format. 
+                                 	; TODO: replace this code with a swap routine? no clue which is faster (yet.)
+                                 	SUB ZH, R18
+                                 	SBC ZL, R17
+                                 	
+                                 
+                                 	;RET
+                                 	JMP dereferencer_return
+                                 	
+                                 dereferencer_EEPROM_load:
+                                 	; IF ZH <= EEPROM_END then EEPROM
+                                 	;	ZH -= HIGH(EEPROM_START_EMU)
+                                 	;   load data into reg from EEPROM data
+                                 	;   ZH += HIGH(EEPROM_START_EMU
+                                 	; IF ZH > EEPROM_END then CRASH
+                                 	CPI ZH, HIGH(EEPROM_END_EMU)+1
+                                 	BRGE dereferencer_BREAK_load
+                                 
+                                 	BREAK
+                                 
+                                 dereferencer_BREAK_load:
+                                 	BREAK
+                                 
+                                 	;RET
+                                 	JMP dereferencer_return
+                                 dereferencer_return:
+                                 	
+                                 	NOP
+                                 
                                  .include "Instructions/LDA.asm"
                                  
                                   * LDA.asm
@@ -2180,131 +2251,121 @@ c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(12): warning: 
                                   *   Author: ROTP
                                   */ 
                                  
-                                 
-                                  dereferencePCtoA:
-                                 	;328p memory starts at 0x0100 and goes up to 0x8ff. 
-                                 	;6502 memory starts at 0x0000.
-                                 	
-                                 	;Hence, all memory addresses referenced will have to be less than 0x07ff (6502 address),
-                                 	;because we will have to add 100 to it. 
-                                 
-                                 	;previous RAM only code:
-                                 	;ldi r16, HIGH(SRAM_START)
-                                 	;adc ZH, r16
-                                 	;
-                                 	;ld AR, Z+
-                                 	;
-                                 	;sbc ZH, r16
-                                 	
+                                  /*
+                                 dereferencer:
                                  
                                  
-                                 SRAM_load:
+                                 dereferencer_SRAM_load:
                                  	; IF ZH <= HIGH SRAM_END_EMU then RAM
                                  	;	ZH += HIGH(SRAM_START)
                                  	;   load data into reg
                                  	;   ZH -= HIGH(SRAM_START)
-000411 30f8                      	CPI ZH, HIGH(SRAM_END_EMU)+1
-000412 f42c                      	BRGE ROM_load
+                                 	CPI ZH, HIGH(SRAM_END_EMU)+1
+                                 	BRGE dereferencer_ROM_load
                                  
-000413 e001                      	LDI r16, HIGH(SRAM_START)
+                                 	LDI r16, HIGH(SRAM_START)
                                  
-                                 	;ADIW ZH, HIGH(SRAM_START)
-000414 0ff0                      	ADD ZH, r16
+                                 	ADD ZH, r16
                                  	
-000415 9001                      	LD AR, Z+
+                                 	LD AR, Z
                                  
-                                 	;SBIW ZH, HIGH(SRAM_START)
-000416 1bf0                      	SUB ZH, r16
+                                 	SUB ZH, r16
                                  	
-000417 9508                      	RET 
+                                 	;RET 
+                                 	JMP dereferencer_return
                                  
-                                 ROM_load:
+                                 dereferencer_ROM_load:
                                  	; IF ZH <= ROM_END then ROM
                                  	;	ZH -= HIGH(ROM_START_EMU)
                                  	;   load data into reg from ROM data
                                  	;   ZH += HIGH(ROM_START_EMU)
-000418 31f0                      	CPI ZH, HIGH(ROM_END_EMU)+1 ;0x0801
-000419 f47c                      	BRGE EEPROM_load
+                                 	CPI ZH, HIGH(ROM_END_EMU)+1 ;
+                                 	BRGE dereferencer_EEPROM_load
                                  
-00041a e008                      	LDI r16, HIGH(ROM_START_EMU)
-00041b e01b                      	LDI r17, LOW(ROMcode)
-00041c e024                      	LDI r18, HIGH(ROMcode)
-00041d 1bf0                      	SUB ZH, r16
+                                 	LDI r16, HIGH(ROM_START_EMU)
+                                 	LDI r17, LOW(ROMcode)
+                                 	LDI r18, HIGH(ROMcode)
+                                 	SUB ZH, r16 
                                  
                                  	;Z now has the proper index of the data we want from our large ROM "array". We need to add the array ptr to Z now and then multiply by two
-00041e 0fe1                      	ADD ZL, r17
-00041f 1ff2                      	ADC ZH, r18
-000420 0fee                      	LSL ZL
-000421 1fff                      	ROL ZH
+                                 	LSL R17
+                                 	ROL R18
+                                 	ADD ZL, R17
+                                 	ADC ZH, R18
                                  
-000422 9004                      	LPM AR, Z ;0x0818
+                                 	LPM AR, Z ;want 0x817
                                  
                                  	; Z is no longer in proper PC, so set it back to proper PC format. 
                                  	; TODO: replace this code with a swap routine? no clue which is faster (yet.)
-000423 95f6                      	LSR ZH
-000424 95e5                      	ASR ZL
-000425 0ff0                      	ADD ZH, r16
-000426 1bf2                      	SUB ZH, R18
-000427 0be1                      	SBC ZL, R17
+                                 	SUB ZH, R18
+                                 	SBC ZL, R17
                                  	
-                                 	;WANT 0x0801
                                  
-000428 9508                      	RET
-                                 
-                                 EEPROM_load:
+                                 	;RET
+                                 	JMP dereferencer_return
+                                 	
+                                 dereferencer_EEPROM_load:
                                  	; IF ZH <= EEPROM_END then EEPROM
                                  	;	ZH -= HIGH(EEPROM_START_EMU)
                                  	;   load data into reg from EEPROM data
                                  	;   ZH += HIGH(EEPROM_START_EMU
                                  	; IF ZH > EEPROM_END then CRASH
-000429 31f4                      	CPI ZH, HIGH(EEPROM_END_EMU)+1
-00042a f40c                      	BRGE BREAK_load
+                                 	CPI ZH, HIGH(EEPROM_END_EMU)+1
+                                 	BRGE dereferencer_BREAK_load
                                  
-00042b 9598                      	BREAK
+                                 	BREAK
                                  
-                                 BREAK_load:
-00042c 9598                      	BREAK
+                                 dereferencer_BREAK_load:
+                                 	BREAK
                                  
-00042d 9508                      	RET
+                                 	;RET
+                                 	JMP dereferencer_return
+                                 dereferencer_return:
+                                 	RET
+                                 	*/
                                  
-                                  LDA_immediate: ;LDA #$09 => A9 09
-00042e 9631                      	ADIW ZH:ZL, 1 ;grab the next byte 
+                                 
+                                 
+                                 LDA_immediate: ;LDA #$09 => A9 09
+000411 9631                      	ADIW ZH:ZL, 1 ;grab the next byte 
                                  
                                  	;CALL dereferencePCtoA ;todo; use a macro here. 
-00042f 30f8
-000430 f434
-000431 e001
-000432 0ff0
-000433 9001
-000434 1bf0
-000435 940c 044f
-000437 31f0
-000438 f484
-000439 e008
-00043a e01b
-00043b e024
-00043c 1bf0
-00043d 0fe1
-00043e 1ff2
-00043f 0fee
-000440 1fff
-000441 9004
-000442 95f6
-000443 95e5
-000444 0ff0
-000445 1bf2
-000446 0be1
-000447 940c 044f
-000449 31f4
-00044a f70c
-00044b 9598
-00044c 9598
-00044d 940c 044f                 	dereferencer AR
                                  	
-00044f 9631                      	ADIW ZH:ZL, 1
+000412 0000                      	NOP
+000413 30f8
+000414 f434
+000415 e001
+000416 0ff0
+000417 8000
+000418 1bf0
+000419 940c 0430
+00041b 31f0
+00041c f46c
+00041d e008
+00041e e01b
+00041f e024
+000420 1bf0
+000421 0f11
+000422 1f22
+000423 0fe1
+000424 1ff2
+000425 9004
+000426 1bf2
+000427 0be1
+000428 940c 0430
+00042a 31f4
+00042b f40c
+00042c 9598
+00042d 9598
+00042e 940c 0430
+000430 0000                      	dereferencer AR
+000431 0000                      	NOP
+                                 	;call dereferencer
+                                 	
+000432 9631                      	ADIW ZH:ZL, 1
                                  
                                  .include "memorymap.asm"
-000450 9508                      
+000433 9508                      
                                   * memorymap.asm
                                   *
                                   *  Created: 5/12/2018 7:26:24 PM
@@ -2333,38 +2394,38 @@ c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(12): warning: 
                                  
                                  init:
                                  	; TODO: Copy RAMcode to SRAM
-000451 e0f0                      	ldi ZH, HIGH(RAMcodeUNLOADED)
-000452 e0eb                      	ldi ZL, LOW(RAMcodeUNLOADED)
+000434 e0f0                      	ldi ZH, HIGH(RAMcodeUNLOADED)
+000435 e0eb                      	ldi ZL, LOW(RAMcodeUNLOADED)
                                  
-000453 e0b1                      	ldi XH, HIGH(SRAM_START)
-000454 e0a0                      	ldi XL, LOW(SRAM_START)
+000436 e0b1                      	ldi XH, HIGH(SRAM_START)
+000437 e0a0                      	ldi XL, LOW(SRAM_START)
                                  
-000455 e0d8                      	ldi YH, HIGH(SRAM_END)
-000456 efcf                      	ldi YL, LOW(SRAM_END)
+000438 e0d8                      	ldi YH, HIGH(SRAM_END)
+000439 efcf                      	ldi YL, LOW(SRAM_END)
                                  
-000457 0fee                      	LSL ZL
-000458 1fff                      	ROL ZH
+00043a 0fee                      	LSL ZL
+00043b 1fff                      	ROL ZH
                                  
                                  ram_copy_loop:
-000459 9005                      	lpm r0, Z+
-00045a 920d                      	st X+, r0
+00043c 9005                      	lpm r0, Z+
+00043d 920d                      	st X+, r0
                                  
-00045b 17bd                      	cp XH, YH
-00045c f7e1                      	brne ram_copy_loop
-00045d 17ac                      	cp XL, YL
-00045e f7d1                      	brne ram_copy_loop
+00043e 17bd                      	cp XH, YH
+00043f f7e1                      	brne ram_copy_loop
+000440 17ac                      	cp XL, YL
+000441 f7d1                      	brne ram_copy_loop
                                  
                                  ram_copy_done:
                                  
                                  
-00045f 940c 0461                 	jmp _start
+000442 940c 0444                 	jmp _start
                                  
                                  _start:
-000461 2400                      	clr AR ; clear A register
-000462 2411                      	clr XR ; clear X register
-000463 2422                      	clr YR ; clear Y register
-000464 27ff                      	clr ZH ; clear PC HIGH register
-000465 27ee                      	clr ZL ; clear PC LOW register
+000444 2400                      	clr AR ; clear A register
+000445 2411                      	clr XR ; clear X register
+000446 2422                      	clr YR ; clear Y register
+000447 27ff                      	clr ZH ; clear PC HIGH register
+000448 27ee                      	clr ZL ; clear PC LOW register
                                  
                                  	; 1. Fetch instruction from PC
                                  	; 2. Decode instruction
@@ -2384,11 +2445,14 @@ c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(12): warning: 
                                  
                                  	;call LDA_immediate
                                  
-000466 e0f8                      	LDI ZH, HIGH(ROM_START_EMU)
-000467 940e 042e                 	call LDA_immediate
+000449 e0f8                      	LDI ZH, HIGH(ROM_START_EMU)
+00044a 940e 0411                 	call LDA_immediate
                                  	;dereferencer AR
                                  
-000469 cffc                          rjmp fetch
+00044c cffc                          rjmp fetch
+                                 
+                                 
+                                 
 
 
 RESOURCE USE INFORMATION
@@ -2406,39 +2470,39 @@ counted separately from r26..r31 here.
 .dseg memory usage only counts static data declared with .byte
 
 "ATmega328P" register use summary:
-x  :   1 y  :   0 z  :   5 r0 :   7 r1 :   1 r2 :   1 r3 :   0 r4 :   0 
+x  :   1 y  :   0 z  :   3 r0 :   5 r1 :   1 r2 :   1 r3 :   0 r4 :   0 
 r5 :   0 r6 :   0 r7 :   0 r8 :   0 r9 :   0 r10:   0 r11:   0 r12:   0 
-r13:   0 r14:   0 r15:   0 r16:  12 r17:   6 r18:   6 r19:   0 r20:   0 
+r13:   0 r14:   0 r15:   0 r16:   5 r17:   4 r18:   4 r19:   0 r20:   0 
 r21:   0 r22:   0 r23:   0 r24:   0 r25:   0 r26:   2 r27:   2 r28:   2 
-r29:   2 r30:  13 r31:  28 
+r29:   2 r30:   7 r31:  14 
 Registers used: 14 out of 35 (40.0%)
 
 "ATmega328P" instruction use summary:
-.lds  :   0 .sts  :   0 adc   :   2 add   :   6 adiw  :   2 and   :   0 
-andi  :   0 asr   :   2 bclr  :   0 bld   :   0 brbc  :   0 brbs  :   0 
-brcc  :   0 brcs  :   0 break :   4 breq  :   0 brge  :   6 brhc  :   0 
+.lds  :   0 .sts  :   0 adc   :   1 add   :   2 adiw  :   2 and   :   0 
+andi  :   0 asr   :   0 bclr  :   0 bld   :   0 brbc  :   0 brbs  :   0 
+brcc  :   0 brcs  :   0 break :   2 breq  :   0 brge  :   3 brhc  :   0 
 brhs  :   0 brid  :   0 brie  :   0 brlo  :   0 brlt  :   0 brmi  :   0 
 brne  :   2 brpl  :   0 brsh  :   0 brtc  :   0 brts  :   0 brvc  :   0 
 brvs  :   0 bset  :   0 bst   :   0 call  :   1 cbi   :   0 cbr   :   0 
 clc   :   0 clh   :   0 cli   :   0 cln   :   0 clr   :   5 cls   :   0 
 clt   :   0 clv   :   0 clz   :   0 com   :   0 cp    :   2 cpc   :   0 
-cpi   :   6 cpse  :   0 dec   :   0 eor   :   0 fmul  :   0 fmuls :   0 
+cpi   :   3 cpse  :   0 dec   :   0 eor   :   0 fmul  :   0 fmuls :   0 
 fmulsu:   0 icall :   0 ijmp  :   0 in    :   0 inc   :   0 jmp   :   5 
-ld    :   2 ldd   :   0 ldi   :  15 lds   :   0 lpm   :   5 lsl   :   3 
-lsr   :   2 mov   :   0 movw  :   0 mul   :   0 muls  :   0 mulsu :   0 
-neg   :   0 nop   :   0 or    :   0 ori   :   0 out   :   0 pop   :   0 
-push  :   0 rcall :   0 ret   :   4 reti  :   0 rjmp  :   1 rol   :   3 
-ror   :   0 sbc   :   2 sbci  :   0 sbi   :   0 sbic  :   0 sbis  :   0 
+ld    :   1 ldd   :   0 ldi   :  11 lds   :   0 lpm   :   3 lsl   :   2 
+lsr   :   0 mov   :   0 movw  :   0 mul   :   0 muls  :   0 mulsu :   0 
+neg   :   0 nop   :   3 or    :   0 ori   :   0 out   :   0 pop   :   0 
+push  :   0 rcall :   0 ret   :   1 reti  :   0 rjmp  :   1 rol   :   2 
+ror   :   0 sbc   :   1 sbci  :   0 sbi   :   0 sbic  :   0 sbis  :   0 
 sbiw  :   0 sbr   :   0 sbrc  :   0 sbrs  :   0 sec   :   0 seh   :   0 
 sei   :   0 sen   :   0 ser   :   0 ses   :   0 set   :   0 sev   :   0 
 sez   :   0 sleep :   0 spm   :   0 st    :   1 std   :   0 sts   :   0 
-sub   :   6 subi  :   0 swap  :   0 tst   :   0 wdr   :   0 
-Instructions used: 23 out of 113 (20.4%)
+sub   :   3 subi  :   0 swap  :   0 tst   :   0 wdr   :   0 
+Instructions used: 22 out of 113 (19.5%)
 
 "ATmega328P" memory use summary [bytes]:
 Segment   Begin    End      Code   Data   Used    Size   Use%
 ---------------------------------------------------------------
-[.cseg] 0x000000 0x0008d4    182   2078   2260   32768   6.9%
+[.cseg] 0x000000 0x00089a    124   2078   2202   32768   6.7%
 [.dseg] 0x000100 0x000900      0   2048   2048    2048 100.0%
 [.eseg] 0x000000 0x000003      0      3      3    1024   0.3%
 

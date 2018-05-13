@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.7  c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm Sun May 13 00:47:21 2018
+AVRASM ver. 2.2.7  c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm Sun May 13 01:35:31 2018
 
 
 EQU  SIGNATURE_000 0000001e
@@ -696,7 +696,7 @@ EQU  TWIaddr      00000030
 EQU  SPMRaddr     00000032
 EQU  INT_VECTORS_SIZE 00000034
 CSEG start        00000000
-CSEG init         00000451
+CSEG init         00000434
 EQU  RAM_SIZE     00000800
 EQU  ROM_SIZE     00000200
 EQU  EEPROM_SIZE  00000200
@@ -707,26 +707,22 @@ ESEG EEPROMcode   00000000
 DEF  AR           r0
 DEF  XR           r1
 DEF  YR           r2
-CSEG dereferencePCtoA 00000411
-CSEG SRAM_load    00000411
+DEF  SP           r3
+CSEG LDA_immediate 00000411
+CSEG dereferencer_SRAM_load@dereferencer@1294 00000413
 EQU  SRAM_END_EMU 000007ff
-CSEG ROM_load     00000418
+CSEG dereferencer_ROM_load@dereferencer@1294 0000041b
 EQU  ROM_END_EMU  00000fff
-CSEG EEPROM_load  00000429
 EQU  ROM_START_EMU 00000800
+CSEG dereferencer_EEPROM_load@dereferencer@1294 0000042a
 EQU  EEPROM_END_EMU 000013ff
-CSEG BREAK_load   0000042c
-CSEG LDA_immediate 0000042e
-CSEG dereferencer_SRAM_load@dereferencer@1233 0000042f
-CSEG dereferencer_ROM_load@dereferencer@1233 00000437
-CSEG dereferencer_EEPROM_load@dereferencer@1233 00000449
-CSEG dereferencer_BREAK_load@dereferencer@1233 0000044c
-CSEG dereferencer_return@dereferencer@1233 0000044f
+CSEG dereferencer_BREAK_load@dereferencer@1294 0000042d
+CSEG dereferencer_return@dereferencer@1294 00000430
 EQU  SRAM_END     000008ff
 EQU  SRAM_START_EMU 00000000
 EQU  EEPROM_START_EMU 00001000
-CSEG ram_copy_loop 00000459
-CSEG ram_copy_done 0000045f
-CSEG _start       00000461
-CSEG fetch_setup  00000466
-CSEG fetch        00000466
+CSEG ram_copy_loop 0000043c
+CSEG ram_copy_done 00000442
+CSEG _start       00000444
+CSEG fetch_setup  00000449
+CSEG fetch        00000449

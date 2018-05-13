@@ -33,12 +33,7 @@
   <ROMcode><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\programcode.asm</FILE><LINE>17</LINE></ROMcode>
   <RAMcode><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\programcode.asm</FILE><LINE>21</LINE></RAMcode>
   <EEPROMcode><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\programcode.asm</FILE><LINE>25</LINE></EEPROMcode>
-  <dereferencePCtoA><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/LDA.asm</FILE><LINE>9</LINE></dereferencePCtoA>
-  <SRAM_load><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/LDA.asm</FILE><LINE>26</LINE></SRAM_load>
-  <ROM_load><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/LDA.asm</FILE><LINE>46</LINE></ROM_load>
-  <EEPROM_load><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/LDA.asm</FILE><LINE>79</LINE></EEPROM_load>
-  <BREAK_load><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/LDA.asm</FILE><LINE>90</LINE></BREAK_load>
-  <LDA_immediate><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/LDA.asm</FILE><LINE>95</LINE></LDA_immediate>
+  <LDA_immediate><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/LDA.asm</FILE><LINE>83</LINE></LDA_immediate>
   <ram_copy_loop><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm</FILE><LINE>34</LINE></ram_copy_loop>
   <ram_copy_done><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm</FILE><LINE>43</LINE></ram_copy_done>
   <_start><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm</FILE><LINE>48</LINE></_start>
