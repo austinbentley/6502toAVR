@@ -84,7 +84,7 @@ STX_zpg:
 DEY_implied:
 TXA_implied:
 STY_absolute:
-STA_absolute:
+;STA_absolute:
 STX_absolute:
 BCC_relative:
 STA_indirect_Y:

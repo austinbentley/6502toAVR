@@ -25,12 +25,14 @@ start: ;to avoid overwriting the interrupt table with our includes!
 .include "Instructions/CLV.asm"
 .include "Instructions/CPX.asm"
 .include "Instructions/CPY.asm"
+.include "Instructions/INX.asm"
 .include "Instructions/LDA.asm"
 .include "Instructions/LDX.asm"
 .include "Instructions/LDY.asm"
 .include "Instructions/SEC.asm"
 .include "Instructions/SED.asm"
 .include "Instructions/SEI.asm"
+.include "Instructions/STA.asm"
 
 
 .include "instruction_mappings.asm"
