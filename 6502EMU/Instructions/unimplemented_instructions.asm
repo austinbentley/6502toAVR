@@ -142,7 +142,7 @@ SBC_X_indirect:
 ;CPX_zpg:
 SBC_zpg:
 INC_zpg:
-INX_implied:
+;INX_implied:
 SBC_immediate:
 NOP_implied:
 ;CPX_absolute:
