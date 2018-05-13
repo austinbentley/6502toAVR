@@ -124,7 +124,7 @@ CPY_zpg:
 CMP_zpg:
 DEC_zpg:
 INY_implied:
-CMP_immediate:
+;CMP_immediate:
 DEX_implied:
 CPY_absolute:
 CMP_absolute:

@@ -18,6 +18,7 @@ start: ;to avoid overwriting the interrupt table with our includes!
 .include "dereferencer.asm"
 .include "Instructions/unimplemented_instructions.asm"
 .include "Instructions/BRK.asm"
+.include "Instructions/CMP.asm"
 .include "Instructions/CLC.asm"
 .include "Instructions/CLD.asm"
 .include "Instructions/CLI.asm"
