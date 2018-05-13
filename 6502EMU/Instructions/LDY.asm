@@ -19,6 +19,7 @@
 	CLR ZH
 
 	dereferencer YR
+	updateNZfromREGISTER YR
 
 	MOV ZL, R22
 	MOV ZH, R23
@@ -32,6 +33,7 @@ LDY_immediate:
 	ADIW ZH:ZL, 1 ;grab the next byte 
 	
 	dereferencer YR
+	updateNZfromREGISTER YR
 	;call dereferencer
 	
 	ADIW ZH:ZL, 1 ;increase pc to next instruction
@@ -55,6 +57,7 @@ LDY_absolute:
 	mov zh, r23
 
 	dereferencer YR
+	updateNZfromREGISTER YR
 
 	mov zl, r24
 	mov zh, r25
@@ -77,6 +80,7 @@ LDY_zpg_X:
 	clc
 
 	dereferencer YR
+	updateNZfromREGISTER YR
 
 	MOV ZL, R22
 	MOV ZH, R23
@@ -105,6 +109,7 @@ LDY_absolute_X:
 	adc zh, r26
 
 	dereferencer YR
+	updateNZfromREGISTER YR
 
 	mov zl, r24
 	mov zh, r25

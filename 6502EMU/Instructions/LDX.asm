@@ -17,6 +17,7 @@
 	CLR ZH
 
 	dereferencer XR
+	updateNZfromREGISTER XR
 
 	MOV ZL, R22
 	MOV ZH, R23
@@ -53,6 +54,7 @@ LDX_absolute:
 	mov zh, r23
 
 	dereferencer XR
+	updateNZfromREGISTER XR
 
 	mov zl, r24
 	mov zh, r25
@@ -75,6 +77,7 @@ LDX_zpg_Y:
 	clc
 
 	dereferencer XR
+	updateNZfromREGISTER XR
 
 	MOV ZL, R22
 	MOV ZH, R23
@@ -103,6 +106,7 @@ LDX_absolute_Y:
 	adc zh, r26
 
 	dereferencer XR
+	updateNZfromREGISTER XR
 
 	mov zl, r24
 	mov zh, r25

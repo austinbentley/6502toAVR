@@ -19,6 +19,7 @@ LDA_zpg:
 	CLR ZH
 
 	dereferencer AR
+	updateNZfromREGISTER AR
 
 	MOV ZL, R22
 	MOV ZH, R23
@@ -55,6 +56,7 @@ LDA_absolute:
 	mov zh, r23
 
 	dereferencer AR
+	updateNZfromREGISTER AR
 
 	mov zl, r24
 	mov zh, r25
@@ -80,6 +82,7 @@ LDA_zpg_X:
 	clc
 
 	dereferencer AR
+	updateNZfromREGISTER AR
 
 	MOV ZL, R22
 	MOV ZH, R23
@@ -108,6 +111,7 @@ LDA_absolute_Y:
 	adc zh, r26
 
 	dereferencer AR
+	updateNZfromREGISTER AR
 
 	mov zl, r24
 	mov zh, r25
@@ -136,6 +140,7 @@ LDA_absolute_X:
 	adc zh, r26
 
 	dereferencer AR
+	updateNZfromREGISTER AR
 
 	mov zl, r24
 	mov zh, r25
