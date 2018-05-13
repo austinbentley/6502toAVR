@@ -8,3 +8,4 @@
  .DEF AR = R0
  .DEF XR = R1
  .DEF YR = R2
+ .DEF SP = R3
