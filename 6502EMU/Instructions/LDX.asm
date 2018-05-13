@@ -43,9 +43,9 @@ LDX_absolute:
 	ADIW ZH:ZL, 1
 
 	;TODO: verify endianness is correct. 
-	dereferencer r23
-	ADIW ZH:ZL, 1
 	dereferencer r22
+	ADIW ZH:ZL, 1
+	dereferencer r23
 
 	mov r24, zl
 	mov r25, zh
@@ -91,9 +91,9 @@ LDX_absolute_Y:
 	ADIW ZH:ZL, 1
 
 	;TODO: verify endianness is correct. 
-	dereferencer r23
-	ADIW ZH:ZL, 1
 	dereferencer r22
+	ADIW ZH:ZL, 1
+	dereferencer r23
 
 	mov r24, zl
 	mov r25, zh
