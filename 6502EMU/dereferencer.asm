@@ -77,7 +77,7 @@ dereferencer_ROM_load:
 
 	;RET
 	JMP dereferencer_return
-
+	h
 dereferencer_EEPROM_load:
 	; IF ZH <= EEPROM_END then EEPROM
 	;	ZH -= HIGH(EEPROM_START_EMU)
