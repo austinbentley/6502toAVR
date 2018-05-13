@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.7  c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm Sun May 13 02:45:42 2018
+AVRASM ver. 2.2.7  c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm Sun May 13 02:53:31 2018
 
 
 EQU  SIGNATURE_000 0000001e
@@ -696,7 +696,7 @@ EQU  TWIaddr      00000030
 EQU  SPMRaddr     00000032
 EQU  INT_VECTORS_SIZE 00000034
 CSEG start        00000000
-CSEG init         0000053e
+CSEG init         0000053f
 EQU  RAM_SIZE     00000800
 EQU  ROM_SIZE     00000200
 EQU  EEPROM_SIZE  00000200
@@ -718,7 +718,6 @@ EQU  ROM_START_EMU 00000800
 EQU  ROM_END_EMU  00000fff
 EQU  EEPROM_START_EMU 00001000
 EQU  EEPROM_END_EMU 000013ff
-CSEG BRK_implied  00000414
 CSEG ORA_X_indirect 00000414
 CSEG ORA_zpg      00000414
 CSEG ASL_zpg      00000414
@@ -869,20 +868,21 @@ CSEG SBC_absolute_Y 00000414
 CSEG SBC_absolute_X 00000414
 CSEG INC_absolute_X 00000414
 CSEG INVALID_OPCODE 00000414
-CSEG LDA_immediate 00000415
-CSEG dereferencer_SRAM_load@dereferencer@1362 0000041c
-CSEG dereferencer_ROM_load@dereferencer@1362 00000424
-CSEG dereferencer_EEPROM_load@dereferencer@1362 00000435
-CSEG dereferencer_BREAK_load@dereferencer@1362 00000438
-CSEG dereferencer_return@dereferencer@1362 0000043b
-CSEG instructionMapping 0000043e
-CSEG ram_copy_loop 00000546
-CSEG ram_copy_done 0000054c
-CSEG _start       0000054e
-CSEG fetch_setup  00000558
-CSEG fetch        0000055c
-CSEG dereferencer_SRAM_load@dereferencer@1518 0000055f
-CSEG dereferencer_ROM_load@dereferencer@1518 00000567
-CSEG dereferencer_EEPROM_load@dereferencer@1518 00000578
-CSEG dereferencer_BREAK_load@dereferencer@1518 0000057b
-CSEG dereferencer_return@dereferencer@1518 0000057e
+CSEG BRK_implied  00000415
+CSEG LDA_immediate 00000416
+CSEG dereferencer_SRAM_load@dereferencer@1373 0000041d
+CSEG dereferencer_ROM_load@dereferencer@1373 00000425
+CSEG dereferencer_EEPROM_load@dereferencer@1373 00000436
+CSEG dereferencer_BREAK_load@dereferencer@1373 00000439
+CSEG dereferencer_return@dereferencer@1373 0000043c
+CSEG instructionMapping 0000043f
+CSEG ram_copy_loop 00000547
+CSEG ram_copy_done 0000054d
+CSEG _start       0000054f
+CSEG fetch_setup  00000559
+CSEG fetch        0000055d
+CSEG dereferencer_SRAM_load@dereferencer@1535 0000055e
+CSEG dereferencer_ROM_load@dereferencer@1535 00000566
+CSEG dereferencer_EEPROM_load@dereferencer@1535 00000577
+CSEG dereferencer_BREAK_load@dereferencer@1535 0000057a
+CSEG dereferencer_return@dereferencer@1535 0000057d

@@ -16,6 +16,7 @@
   <FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\memorymap.asm</FILE>
   <FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\dereferencer.asm</FILE>
   <FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/unimplemented_instructions.asm</FILE>
+  <FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/BRK.asm</FILE>
   <FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/LDA.asm</FILE>
   <FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\instruction_mappings.asm</FILE>
  </INCLUDED_FILES>
@@ -31,12 +32,11 @@
  </OUTPUT_FILES>
  <LABELS>
   <start><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm</FILE><LINE>8</LINE></start>
-  <init><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm</FILE><LINE>23</LINE></init>
+  <init><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm</FILE><LINE>24</LINE></init>
   <RAMcodeUNLOADED><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\programcode.asm</FILE><LINE>14</LINE></RAMcodeUNLOADED>
   <ROMcode><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\programcode.asm</FILE><LINE>17</LINE></ROMcode>
   <RAMcode><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\programcode.asm</FILE><LINE>21</LINE></RAMcode>
   <EEPROMcode><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\programcode.asm</FILE><LINE>25</LINE></EEPROMcode>
-  <BRK_implied><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/unimplemented_instructions.asm</FILE><LINE>8</LINE></BRK_implied>
   <ORA_X_indirect><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/unimplemented_instructions.asm</FILE><LINE>9</LINE></ORA_X_indirect>
   <ORA_zpg><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/unimplemented_instructions.asm</FILE><LINE>10</LINE></ORA_zpg>
   <ASL_zpg><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/unimplemented_instructions.asm</FILE><LINE>11</LINE></ASL_zpg>
@@ -187,12 +187,13 @@
   <SBC_absolute_X><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/unimplemented_instructions.asm</FILE><LINE>157</LINE></SBC_absolute_X>
   <INC_absolute_X><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/unimplemented_instructions.asm</FILE><LINE>158</LINE></INC_absolute_X>
   <INVALID_OPCODE><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/unimplemented_instructions.asm</FILE><LINE>159</LINE></INVALID_OPCODE>
-  <LDA_immediate><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/LDA.asm</FILE><LINE>10</LINE></LDA_immediate>
+  <BRK_implied><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/BRK.asm</FILE><LINE>8</LINE></BRK_implied>
+  <LDA_immediate><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/LDA.asm</FILE><LINE>12</LINE></LDA_immediate>
   <instructionMapping><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\instruction_mappings.asm</FILE><LINE>9</LINE></instructionMapping>
-  <ram_copy_loop><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm</FILE><LINE>37</LINE></ram_copy_loop>
-  <ram_copy_done><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm</FILE><LINE>46</LINE></ram_copy_done>
-  <_start><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm</FILE><LINE>51</LINE></_start>
-  <fetch_setup><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm</FILE><LINE>74</LINE></fetch_setup>
-  <fetch><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm</FILE><LINE>81</LINE></fetch>
+  <ram_copy_loop><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm</FILE><LINE>38</LINE></ram_copy_loop>
+  <ram_copy_done><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm</FILE><LINE>47</LINE></ram_copy_done>
+  <_start><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm</FILE><LINE>52</LINE></_start>
+  <fetch_setup><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm</FILE><LINE>75</LINE></fetch_setup>
+  <fetch><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm</FILE><LINE>82</LINE></fetch>
  </LABELS>
 </ASSEMBLER_INFO>

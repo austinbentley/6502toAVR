@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.7  c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm Sun May 13 02:45:42 2018
+AVRASM ver. 2.2.7  c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm Sun May 13 02:53:31 2018
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m328pdef.inc'
 c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(14): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\programcode.asm'
@@ -10,8 +10,9 @@ c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(16): Including
 c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(17): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\memorymap.asm'
 c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(18): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\dereferencer.asm'
 c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(19): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/unimplemented_instructions.asm'
-c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(20): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/LDA.asm'
-c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(21): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\instruction_mappings.asm'
+c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(20): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/BRK.asm'
+c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(21): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/LDA.asm'
+c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(22): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\instruction_mappings.asm'
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m328pdef.inc'
 c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(14): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\programcode.asm'
 c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(15): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\definitions.asm'
@@ -19,8 +20,9 @@ c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(16): Including
 c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(17): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\memorymap.asm'
 c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(18): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\dereferencer.asm'
 c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(19): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/unimplemented_instructions.asm'
-c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(20): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/LDA.asm'
-c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(21): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\instruction_mappings.asm'
+c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(20): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/BRK.asm'
+c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(21): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/LDA.asm'
+c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(22): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\instruction_mappings.asm'
                                  
                                  ;
                                  
@@ -1010,7 +1012,7 @@ c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(21): Including
                                  ;
                                  
                                  start: ;to avoid overwriting the interrupt table with our includes!
-000000 940c 053e                 	jmp init
+000000 940c 053f                 	jmp init
                                  
                                  
 000002 0000
@@ -2065,8 +2067,8 @@ c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(12): warning: 
 00040a dddd                      	     .DB 0xA9, 0x09, 0xDA, 0xDB, 0xDC, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,                                  0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD                                 , 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0x00040b 00a9
 00040c 01a9
 00040d 02a9
-00040e b1b0
-00040f b3b2
+00040e 03a9
+00040f 04a9
 000410 b5b4
 000411 b7b6
 000412 b9b8
@@ -2232,7 +2234,7 @@ c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(12): warning: 
                                   *   Author: ROTP
                                   */ 
                                  
-                                 BRK_implied:
+                                 ;BRK_implied:
                                  ORA_X_indirect:
                                  ORA_zpg:
                                  ASL_zpg:
@@ -2384,8 +2386,17 @@ c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(12): warning: 
                                  SBC_absolute_X:
                                  INC_absolute_X:
                                  INVALID_OPCODE:
-                                 .include "Instructions/LDA.asm"
+                                 .include "Instructions/BRK.asm"
 000414 9598                      
+                                  * BRK.asm
+                                  *
+                                  *  Created: 5/13/2018 2:46:37 AM
+                                  *   Author: ROTP
+                                  */ 
+                                 
+                                 BRK_implied:
+                                 .include "Instructions/LDA.asm"
+000415 9598                      
                                   * LDA.asm
                                   *
                                   *  Created: 5/12/2018 9:14:03 PM
@@ -2393,52 +2404,60 @@ c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(12): warning: 
                                   */ 
                                  
                                  
+                                 ;LDA_X_indirect:
+                                 ;LDA_zpg:
                                  
                                  LDA_immediate: ;LDA #$09 => A9 09
-000415 2f0e
-000416 2fe4
-000417 2f40
-000418 2f0f
-000419 2ff5
-00041a 2f50                      	swapPCwithTEMPPC
+000416 2f0e
+000417 2fe4
+000418 2f40
+000419 2f0f
+00041a 2ff5
+00041b 2f50                      	swapPCwithTEMPPC
                                  
-00041b 9631                      	ADIW ZH:ZL, 1 ;grab the next byte 
+00041c 9631                      	ADIW ZH:ZL, 1 ;grab the next byte 
                                  	
-00041c 30f8
-00041d f434
-00041e e001
-00041f 0ff0
-000420 8020
-000421 1bf0
-000422 940c 043b
-000424 31f0
-000425 f47c
-000426 e008
-000427 e01b
-000428 e024
-000429 2f3e
-00042a 2f4f
-00042b 1bf0
-00042c 0f11
-00042d 1f22
-00042e 0fe1
-00042f 1ff2
-000430 9024
-000431 2fe3
-000432 2ff4
-000433 940c 043b
-000435 31f4
-000436 f40c
-000437 9598
+00041d 30f8
+00041e f434
+00041f e001
+000420 0ff0
+000421 8020
+000422 1bf0
+000423 940c 043c
+000425 31f0
+000426 f47c
+000427 e008
+000428 e01b
+000429 e024
+00042a 2f3e
+00042b 2f4f
+00042c 1bf0
+00042d 0f11
+00042e 1f22
+00042f 0fe1
+000430 1ff2
+000431 9024
+000432 2fe3
+000433 2ff4
+000434 940c 043c
+000436 31f4
+000437 f40c
 000438 9598
-000439 940c 043b
-00043b 0000                      	dereferencer AR
+000439 9598
+00043a 940c 043c
+00043c 0000                      	dereferencer AR
                                  	;call dereferencer
                                  	
-00043c 9631                      	ADIW ZH:ZL, 1 ;increase pc to next instruction
+00043d 9631                      	ADIW ZH:ZL, 1 ;increase pc to next instruction
                                  
+00043e 9508                      	RET
+                                 
+                                 ;LDA_absolute:
+                                 ;LDA_indirect_Y:
+                                 ;LDA_zpg_X
+                                 ;LDA_absolute_Y:
                                  .include "instruction_mappings.asm"
-00043d 9508                      
+                                 
                                   * instruction_mappings.asm
                                   *
                                   *  Created: 5/13/2018 1:48:46 AM
@@ -2446,8 +2465,7 @@ c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(12): warning: 
                                   */ 
                                  
                                  
-00043e 0414
-00043f 0414
+00043f 0415
 000440 0414
 000441 0414
 000442 0414
@@ -2615,8 +2633,8 @@ c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(12): warning: 
 0004e4 0414
 0004e5 0414
 0004e6 0414
-0004e7 0415
-0004e8 0414
+0004e7 0414
+0004e8 0416
 0004e9 0414
 0004ea 0414
 0004eb 0414
@@ -2701,46 +2719,47 @@ c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(12): warning: 
 00053a 0414
 00053b 0414
 00053c 0414
-00053d 0414                      
+00053d 0414
+00053e 0414                      
                                  init:
                                  	; TODO: Copy RAMcode to SRAM
-00053e e0f0                      	ldi ZH, HIGH(RAMcodeUNLOADED)
-00053f e0eb                      	ldi ZL, LOW(RAMcodeUNLOADED)
+00053f e0f0                      	ldi ZH, HIGH(RAMcodeUNLOADED)
+000540 e0eb                      	ldi ZL, LOW(RAMcodeUNLOADED)
                                  
-000540 e0b1                      	ldi XH, HIGH(SRAM_START)
-000541 e0a0                      	ldi XL, LOW(SRAM_START)
+000541 e0b1                      	ldi XH, HIGH(SRAM_START)
+000542 e0a0                      	ldi XL, LOW(SRAM_START)
                                  
-000542 e0d8                      	ldi YH, HIGH(SRAM_END)
-000543 efcf                      	ldi YL, LOW(SRAM_END)
+000543 e0d8                      	ldi YH, HIGH(SRAM_END)
+000544 efcf                      	ldi YL, LOW(SRAM_END)
                                  
-000544 0fee                      	LSL ZL
-000545 1fff                      	ROL ZH
+000545 0fee                      	LSL ZL
+000546 1fff                      	ROL ZH
                                  
                                  ram_copy_loop:
-000546 9005                      	lpm r0, Z+
-000547 920d                      	st X+, r0
+000547 9005                      	lpm r0, Z+
+000548 920d                      	st X+, r0
                                  
-000548 17bd                      	cp XH, YH
-000549 f7e1                      	brne ram_copy_loop
-00054a 17ac                      	cp XL, YL
-00054b f7d1                      	brne ram_copy_loop
+000549 17bd                      	cp XH, YH
+00054a f7e1                      	brne ram_copy_loop
+00054b 17ac                      	cp XL, YL
+00054c f7d1                      	brne ram_copy_loop
                                  
                                  ram_copy_done:
                                  
                                  
-00054c 940c 054e                 	jmp _start
+00054d 940c 054f                 	jmp _start
                                  
                                  _start:
-00054e 2422                      	clr AR ; clear A register
-00054f 2433                      	clr XR ; clear X register
-000550 2444                      	clr YR ; clear Y register
-000551 27ff                      	clr ZH ; clear PC HIGH register
-000552 27ee                      	clr ZL ; clear PC LOW register
-000553 27bb                      	CLR XH
-000554 27aa                      	CLR XL
-000555 27dd                      	CLR YH
-000556 27cc                      	CLR YL
-000557 2400                      	CLR R0
+00054f 2422                      	clr AR ; clear A register
+000550 2433                      	clr XR ; clear X register
+000551 2444                      	clr YR ; clear Y register
+000552 27ff                      	clr ZH ; clear PC HIGH register
+000553 27ee                      	clr ZL ; clear PC LOW register
+000554 27bb                      	CLR XH
+000555 27aa                      	CLR XL
+000556 27dd                      	CLR YH
+000557 27cc                      	CLR YL
+000558 2400                      	CLR R0
                                  
                                  	; 1. Fetch instruction from PC
                                  	; 2. Decode instruction
@@ -2755,68 +2774,70 @@ c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(12): warning: 
                                  
                                  fetch_setup:
                                  	;we want the code to start in ROM. 
-000558 e0f8                      	LDI ZH, HIGH(ROM_START_EMU)
-000559 e0e0                      	LDI ZL, LOW(ROM_START_EMU)
-00055a e058                      	LDI TEMPPCH, HIGH(ROM_START_EMU) 
-00055b e040                      	LDI TEMPPCL, LOW(ROM_START_EMU)
+000559 e0f8                      	LDI ZH, HIGH(ROM_START_EMU)
+00055a e0e0                      	LDI ZL, LOW(ROM_START_EMU)
+00055b e058                      	LDI TEMPPCH, HIGH(ROM_START_EMU) 
+00055c e040                      	LDI TEMPPCL, LOW(ROM_START_EMU)
                                  
                                  fetch:
-00055c 0000                      	nop
+00055d 0000                      	nop
                                  
-00055d 2fe4                      	mov ZL, TEMPPCL
-00055e 2ff5                      	mov ZH, TEMPPCH
+                                 	;mov ZL, TEMPPCL
+                                 	;mov ZH, TEMPPCH
                                  
-00055f 30f8
-000560 f434
-000561 e001
-000562 0ff0
-000563 8040
-000564 1bf0
-000565 940c 057e
-000567 31f0
-000568 f47c
-000569 e008
-00056a e01b
-00056b e024
-00056c 2f3e
-00056d 2f4f
-00056e 1bf0
-00056f 0f11
-000570 1f22
-000571 0fe1
-000572 1ff2
-000573 9044
-000574 2fe3
-000575 2ff4
-000576 940c 057e
-000578 31f4
-000579 f40c
+00055e 30f8
+00055f f434
+000560 e001
+000561 0ff0
+000562 8040
+000563 1bf0
+000564 940c 057d
+000566 31f0
+000567 f47c
+000568 e008
+000569 e01b
+00056a e024
+00056b 2f3e
+00056c 2f4f
+00056d 1bf0
+00056e 0f11
+00056f 1f22
+000570 0fe1
+000571 1ff2
+000572 9044
+000573 2fe3
+000574 2ff4
+000575 940c 057d
+000577 31f4
+000578 f40c
+000579 9598
 00057a 9598
-00057b 9598
-00057c 940c 057e
-00057e 0000                      	dereferencer INSTRUCTION
-00057f e002                      	ldi r16, 2
-000580 9e40                      	mul INSTRUCTION, r16
+00057b 940c 057d
+00057d 0000                      	dereferencer INSTRUCTION
+00057e e002                      	ldi r16, 2
+00057f 9e40                      	mul INSTRUCTION, r16
                                  
                                  	;we have the pointer to the instruction.
                                  	;preserve the old pc
                                  	;we need to add to Z for the offset. 
-000581 2f4e                      	mov TEMPPCL, ZL
-000582 2f5f                      	mov TEMPPCH, ZH
+000580 2f4e                      	mov TEMPPCL, ZL
+000581 2f5f                      	mov TEMPPCH, ZH
                                  
-000583 e7ec                      	LDI ZL, LOW(instructionMapping)*2
-000584 e0f8                      	LDI ZH, HIGH(instructionMapping)*2
-000585 0de0                      	add zl, r0
-000586 1df1                      	adc zh, r1
+                                 	;calcutate the pointer for getting the instruction's address. 
+000582 e7ee                      	LDI ZL, LOW(instructionMapping)*2
+000583 e0f8                      	LDI ZH, HIGH(instructionMapping)*2
+000584 0de0                      	add zl, r0
+000585 1df1                      	adc zh, r1
                                  	
-000587 9005                      	lpm R0, Z+
-000588 9014                      	lpm r1, z
-000589 2de0                      	mov zl, r0
-00058a 2df1                      	mov zh, r1
+                                 	;grab the instruction address and store it in Z
+000586 9005                      	lpm R0, Z+
+000587 9014                      	lpm r1, z
+000588 2de0                      	mov zl, r0
+000589 2df1                      	mov zh, r1
                                  
-00058b 9509                      	icall
+00058a 9509                      	icall
                                  
-00058c cfcf                          rjmp fetch
+00058b cfd1                          rjmp fetch
                                  
                                  
                                  
@@ -2839,15 +2860,15 @@ counted separately from r26..r31 here.
 "ATmega328P" register use summary:
 x  :   1 y  :   0 z  :   7 r0 :   6 r1 :   3 r2 :   3 r3 :   1 r4 :   4 
 r5 :   0 r6 :   0 r7 :   0 r8 :   0 r9 :   0 r10:   0 r11:   0 r12:   0 
-r13:   0 r14:   0 r15:   0 r16:  16 r17:   6 r18:   6 r19:   4 r20:   9 
-r21:   5 r22:   0 r23:   0 r24:   0 r25:   0 r26:   3 r27:   3 r28:   3 
-r29:   3 r30:  19 r31:  31 
+r13:   0 r14:   0 r15:   0 r16:  16 r17:   6 r18:   6 r19:   4 r20:   8 
+r21:   4 r22:   0 r23:   0 r24:   0 r25:   0 r26:   3 r27:   3 r28:   3 
+r29:   3 r30:  18 r31:  30 
 Registers used: 19 out of 35 (54.3%)
 
 "ATmega328P" instruction use summary:
 .lds  :   0 .sts  :   0 adc   :   3 add   :   5 adiw  :   2 and   :   0 
 andi  :   0 asr   :   0 bclr  :   0 bld   :   0 brbc  :   0 brbs  :   0 
-brcc  :   0 brcs  :   0 break :   5 breq  :   0 brge  :   6 brhc  :   0 
+brcc  :   0 brcs  :   0 break :   6 breq  :   0 brge  :   6 brhc  :   0 
 brhs  :   0 brid  :   0 brie  :   0 brlo  :   0 brlt  :   0 brmi  :   0 
 brne  :   2 brpl  :   0 brsh  :   0 brtc  :   0 brts  :   0 brvc  :   0 
 brvs  :   0 bset  :   0 bst   :   0 call  :   0 cbi   :   0 cbr   :   0 
@@ -2856,7 +2877,7 @@ clt   :   0 clv   :   0 clz   :   0 com   :   0 cp    :   2 cpc   :   0
 cpi   :   6 cpse  :   0 dec   :   0 eor   :   0 fmul  :   0 fmuls :   0 
 fmulsu:   0 icall :   1 ijmp  :   0 in    :   0 inc   :   0 jmp   :   8 
 ld    :   2 ldd   :   0 ldi   :  21 lds   :   0 lpm   :   8 lsl   :   3 
-lsr   :   0 mov   :  20 movw  :   0 mul   :   1 muls  :   0 mulsu :   0 
+lsr   :   0 mov   :  18 movw  :   0 mul   :   1 muls  :   0 mulsu :   0 
 neg   :   0 nop   :   3 or    :   0 ori   :   0 out   :   0 pop   :   0 
 push  :   0 rcall :   0 ret   :   1 reti  :   0 rjmp  :   1 rol   :   3 
 ror   :   0 sbc   :   0 sbci  :   0 sbi   :   0 sbic  :   0 sbis  :   0 
@@ -2869,7 +2890,7 @@ Instructions used: 23 out of 113 (20.4%)
 "ATmega328P" memory use summary [bytes]:
 Segment   Begin    End      Code   Data   Used    Size   Use%
 ---------------------------------------------------------------
-[.cseg] 0x000000 0x000b1a    246   2596   2842   32768   8.7%
+[.cseg] 0x000000 0x000b18    244   2596   2840   32768   8.7%
 [.dseg] 0x000100 0x000900      0   2048   2048    2048 100.0%
 [.eseg] 0x000000 0x000003      0      3      3    1024   0.3%
 

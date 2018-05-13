@@ -17,6 +17,7 @@ start: ;to avoid overwriting the interrupt table with our includes!
 .include "memorymap.asm"
 .include "dereferencer.asm"
 .include "Instructions/unimplemented_instructions.asm"
+.include "Instructions/BRK.asm"
 .include "Instructions/LDA.asm"
 .include "instruction_mappings.asm"
 
@@ -81,9 +82,6 @@ fetch_setup:
 fetch:
 	nop
 
-	mov ZL, TEMPPCL
-	mov ZH, TEMPPCH
-
 	dereferencer INSTRUCTION
 	ldi r16, 2
 	mul INSTRUCTION, r16
@@ -94,11 +92,13 @@ fetch:
 	mov TEMPPCL, ZL
 	mov TEMPPCH, ZH
 
+	;calcutate the pointer for getting the instruction's address. 
 	LDI ZL, LOW(instructionMapping)*2
 	LDI ZH, HIGH(instructionMapping)*2
 	add zl, r0
 	adc zh, r1
 	
+	;grab the instruction address and store it in Z
 	lpm R0, Z+
 	lpm r1, z
 	mov zl, r0
