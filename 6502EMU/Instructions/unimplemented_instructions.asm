@@ -99,7 +99,7 @@ LDY_immediate:
 LDA_X_indirect:
 LDX_immediate:
 LDY_zpg:
-LDA_zpg:
+;LDA_zpg:
 LDX_zpg:
 TAY_implied:
 ;LDA_immediate:
