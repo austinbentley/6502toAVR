@@ -9,3 +9,5 @@
  .DEF XR = R1
  .DEF YR = R2
  .DEF SP = R3
+
+ .DEF INSTRUCTION = R4

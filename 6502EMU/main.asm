@@ -64,15 +64,14 @@ _start:
 
 
 fetch_setup:
+	;we want the code to start in ROM. 
+	LDI ZH, HIGH(ROM_START_EMU)
+	LDI ZL, LOW(ROM_START_EMU)
 
 fetch:
-	
+	nop
 
-	;call LDA_immediate
-
-	LDI ZH, HIGH(ROM_START_EMU)
-	call LDA_immediate
-	;dereferencer AR
+	dereferencer INSTRUCTION
 
     rjmp fetch
 

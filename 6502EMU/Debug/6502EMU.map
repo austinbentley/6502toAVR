@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.7  c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm Sun May 13 01:35:31 2018
+AVRASM ver. 2.2.7  c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm Sun May 13 01:47:07 2018
 
 
 EQU  SIGNATURE_000 0000001e
@@ -696,7 +696,7 @@ EQU  TWIaddr      00000030
 EQU  SPMRaddr     00000032
 EQU  INT_VECTORS_SIZE 00000034
 CSEG start        00000000
-CSEG init         00000434
+CSEG init         00000437
 EQU  RAM_SIZE     00000800
 EQU  ROM_SIZE     00000200
 EQU  EEPROM_SIZE  00000200
@@ -708,21 +708,27 @@ DEF  AR           r0
 DEF  XR           r1
 DEF  YR           r2
 DEF  SP           r3
-CSEG LDA_immediate 00000411
-CSEG dereferencer_SRAM_load@dereferencer@1294 00000413
+DEF  INSTRUCTION  r4
+CSEG LDA_immediate 00000414
+CSEG dereferencer_SRAM_load@dereferencer@1133 00000415
 EQU  SRAM_END_EMU 000007ff
-CSEG dereferencer_ROM_load@dereferencer@1294 0000041b
+CSEG dereferencer_ROM_load@dereferencer@1133 0000041d
 EQU  ROM_END_EMU  00000fff
 EQU  ROM_START_EMU 00000800
-CSEG dereferencer_EEPROM_load@dereferencer@1294 0000042a
+CSEG dereferencer_EEPROM_load@dereferencer@1133 0000042e
 EQU  EEPROM_END_EMU 000013ff
-CSEG dereferencer_BREAK_load@dereferencer@1294 0000042d
-CSEG dereferencer_return@dereferencer@1294 00000430
+CSEG dereferencer_BREAK_load@dereferencer@1133 00000431
+CSEG dereferencer_return@dereferencer@1133 00000434
 EQU  SRAM_END     000008ff
 EQU  SRAM_START_EMU 00000000
 EQU  EEPROM_START_EMU 00001000
-CSEG ram_copy_loop 0000043c
-CSEG ram_copy_done 00000442
-CSEG _start       00000444
-CSEG fetch_setup  00000449
-CSEG fetch        00000449
+CSEG ram_copy_loop 0000043f
+CSEG ram_copy_done 00000445
+CSEG _start       00000447
+CSEG fetch_setup  0000044c
+CSEG fetch        0000044e
+CSEG dereferencer_SRAM_load@dereferencer@1295 0000044e
+CSEG dereferencer_ROM_load@dereferencer@1295 00000456
+CSEG dereferencer_EEPROM_load@dereferencer@1295 00000467
+CSEG dereferencer_BREAK_load@dereferencer@1295 0000046a
+CSEG dereferencer_return@dereferencer@1295 0000046d

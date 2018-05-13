@@ -6,6 +6,7 @@
  */ 
 
 .MACRO dereferencer
+;dereferencer:
 dereferencer_SRAM_load:
 	; IF ZH <= HIGH SRAM_END_EMU then RAM
 	;	ZH += HIGH(SRAM_START)
@@ -18,7 +19,7 @@ dereferencer_SRAM_load:
 
 	ADD ZH, r16
 	
-	LD @0, Z
+	LD AR, Z
 
 	SUB ZH, r16
 	
@@ -36,6 +37,8 @@ dereferencer_ROM_load:
 	LDI r16, HIGH(ROM_START_EMU)
 	LDI r17, LOW(ROMcode)
 	LDI r18, HIGH(ROMcode)
+	MOV R19, ZL
+	MOV R20, ZH
 	SUB ZH, r16 
 
 	;Z now has the proper index of the data we want from our large ROM "array". We need to add the array ptr to Z now and then multiply by two
@@ -44,12 +47,14 @@ dereferencer_ROM_load:
 	ADD ZL, R17
 	ADC ZH, R18
 
-	LPM @0, Z ;want 0x817
+	LPM AR, Z ;want 0x817
 
 	; Z is no longer in proper PC, so set it back to proper PC format. 
 	; TODO: replace this code with a swap routine? no clue which is faster (yet.)
-	SUB ZH, R18
-	SBC ZL, R17
+	;SUB ZH, R18
+	;SBC ZL, R17
+	MOV ZL, R19
+	MOV ZH, R20
 	
 
 	;RET
@@ -74,5 +79,6 @@ dereferencer_BREAK_load:
 dereferencer_return:
 	
 	NOP
+	;ret
 
 .ENDMACRO

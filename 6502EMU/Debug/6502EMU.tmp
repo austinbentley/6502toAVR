@@ -33,11 +33,11 @@
   <ROMcode><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\programcode.asm</FILE><LINE>17</LINE></ROMcode>
   <RAMcode><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\programcode.asm</FILE><LINE>21</LINE></RAMcode>
   <EEPROMcode><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\programcode.asm</FILE><LINE>25</LINE></EEPROMcode>
-  <LDA_immediate><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/LDA.asm</FILE><LINE>83</LINE></LDA_immediate>
+  <LDA_immediate><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/LDA.asm</FILE><LINE>10</LINE></LDA_immediate>
   <ram_copy_loop><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm</FILE><LINE>34</LINE></ram_copy_loop>
   <ram_copy_done><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm</FILE><LINE>43</LINE></ram_copy_done>
   <_start><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm</FILE><LINE>48</LINE></_start>
   <fetch_setup><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm</FILE><LINE>66</LINE></fetch_setup>
-  <fetch><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm</FILE><LINE>68</LINE></fetch>
+  <fetch><FILE>c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm</FILE><LINE>71</LINE></fetch>
  </LABELS>
 </ASSEMBLER_INFO>
