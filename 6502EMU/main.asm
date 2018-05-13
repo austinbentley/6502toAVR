@@ -79,6 +79,10 @@ fetch_setup:
 	LDI TEMPPCH, HIGH(ROM_START_EMU) 
 	LDI TEMPPCL, LOW(ROM_START_EMU)
 
+	inc XR
+	inc XR
+	inc XR
+
 fetch:
 	nop
 

@@ -116,7 +116,7 @@ CLV_implied:
 LDA_absolute_Y:
 TSX_implied:
 LDY_absolute_X:
-LDA_absolute_X:
+;LDA_absolute_X:
 LDX_absolute_Y:
 CPY_immediate:
 CMP_X_indirect:
