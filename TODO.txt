@@ -1,0 +1,1 @@
+LDA, LDX, LDY need to ensure that N and Z flags are set when loading data. 

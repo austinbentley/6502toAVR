@@ -1,18 +1,28 @@
 
-AVRASM ver. 2.2.7  c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm Sun May 13 00:47:21 2018
+AVRASM ver. 2.2.7  c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm Sun May 13 03:12:44 2018
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m328pdef.inc'
 c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(14): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\programcode.asm'
 c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(15): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\definitions.asm'
-c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(16): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\dereferencer.asm'
-c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(17): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/LDA.asm'
-c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(18): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\memorymap.asm'
+c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\definitions.asm(16): warning: Register r4 already defined by the .DEF directive
+c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(15): 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\definitions.asm' included form here
+c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(16): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\general_macros.asm'
+c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(17): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\memorymap.asm'
+c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(18): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\dereferencer.asm'
+c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(19): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/unimplemented_instructions.asm'
+c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(20): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/BRK.asm'
+c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(21): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/LDA.asm'
+c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(22): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\instruction_mappings.asm'
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m328pdef.inc'
 c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(14): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\programcode.asm'
 c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(15): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\definitions.asm'
-c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(16): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\dereferencer.asm'
-c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(17): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/LDA.asm'
-c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(18): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\memorymap.asm'
+c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(16): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\general_macros.asm'
+c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(17): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\memorymap.asm'
+c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(18): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\dereferencer.asm'
+c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(19): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/unimplemented_instructions.asm'
+c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(20): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/BRK.asm'
+c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(21): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\Instructions/LDA.asm'
+c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(22): Including file 'c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\instruction_mappings.asm'
                                  
                                  ;
                                  
@@ -1002,7 +1012,7 @@ c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(18): Including
                                  ;
                                  
                                  start: ;to avoid overwriting the interrupt table with our includes!
-000000 940c 0451                 	jmp init
+000000 940c 05ac                 	jmp init
                                  
                                  
 000002 0000
@@ -2054,12 +2064,16 @@ c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(12): warning: 
 000407 dddd
 000408 dddd
 000409 dddd
-00040a dddd                      	     .DB 0xA9, 0x09, 0xDA, 0xDB, 0xDC, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,                                  0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD                                 , 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0x00040b b1b0
-00040c b3b2
-00040d b5b4
-00040e b7b6
-00040f b9b8
-000410 bbba                      DD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,                                  0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD                                 , 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0x000100                           DD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,                                  0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD                                 , 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0x                                 DD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,                                  0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD000000 ee
+00040a dddd                      	     .DB 0xA9, 0x09, 0xDA, 0xDB, 0xDC, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,                                  0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD                                 , 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0x00040b 00a9
+00040c 03ad
+00040d ab00
+00040e 02cd
+00040f 03a9
+000410 04a9
+000411 b5b4
+000412 b7b6
+000413 b9b8
+000414 bbba                      DD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,                                  0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD                                 , 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0x000100                           DD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,                                  0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD                                 , 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0x                                 DD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,                                  0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD000000 ee
 000001 ee
 000002 ee                        , 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0x                                 DD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,                                  0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD,0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD                                 .include "definitions.asm"
                                  
@@ -2069,242 +2083,41 @@ c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(12): warning: 
                                   *   Author: ROTP
                                   */ 
                                  
-                                  .DEF AR = R0
-                                  .DEF XR = R1
-                                  .DEF YR = R2
-                                 .include "dereferencer.asm"
+                                  .DEF AR = R2
+                                  .DEF XR = R3
+                                  .DEF YR = R4
+                                  .DEF SP = R5
                                  
-                                  * dereferencer.asm
+                                  .DEF TEMPPCL = R20
+                                  .DEF TEMPPCH = R21
+                                 
+                                 .include "general_macros.asm"
+                                 
+                                  * general_macros.asm
                                   *
-                                  *  Created: 5/13/2018 12:35:43 AM
+                                  *  Created: 5/13/2018 1:55:47 AM
                                   *   Author: ROTP
                                   */ 
                                  
-                                  
-                                 .MACRO dereferencer
-                                 	;328p memory starts at 0x0100 and goes up to 0x8ff. 
-                                 	;6502 memory starts at 0x0000.
-                                 	
-                                 	;Hence, all memory addresses referenced will have to be less than 0x07ff (6502 address),
-                                 	;because we will have to add 100 to it. 
-                                 
-                                 	;previous RAM only code:
-                                 	;ldi r16, HIGH(SRAM_START)
-                                 	;adc ZH, r16
-                                 	;
-                                 	;ld AR, Z+
-                                 	;
-                                 	;sbc ZH, r16
-                                 	
-                                 
-                                 
-                                 dereferencer_SRAM_load:
-                                 	; IF ZH <= HIGH SRAM_END_EMU then RAM
-                                 	;	ZH += HIGH(SRAM_START)
-                                 	;   load data into reg
-                                 	;   ZH -= HIGH(SRAM_START)
-                                 	CPI ZH, HIGH(SRAM_END_EMU)+1
-                                 	BRGE dereferencer_ROM_load
-                                 
-                                 	LDI r16, HIGH(SRAM_START)
-                                 
-                                 	;ADIW ZH, HIGH(SRAM_START)
-                                 	ADD ZH, r16
-                                 	
-                                 	LD @0, Z+
-                                 
-                                 	;SBIW ZH, HIGH(SRAM_START)
-                                 	SUB ZH, r16
-                                 	
-                                 	;RET 
-                                 	JMP dereferencer_return
-                                 
-                                 dereferencer_ROM_load:
-                                 	; IF ZH <= ROM_END then ROM
-                                 	;	ZH -= HIGH(ROM_START_EMU)
-                                 	;   load data into reg from ROM data
-                                 	;   ZH += HIGH(ROM_START_EMU)
-                                 	CPI ZH, HIGH(ROM_END_EMU)+1 ;0x0801
-                                 	BRGE dereferencer_EEPROM_load
-                                 
-                                 	LDI r16, HIGH(ROM_START_EMU)
-                                 	LDI r17, LOW(ROMcode)
-                                 	LDI r18, HIGH(ROMcode)
-                                 	SUB ZH, r16 ;0802 => 0002
-                                 
-                                 	;Z now has the proper index of the data we want from our large ROM "array". We need to add the array ptr to Z now and then multiply by two
-                                 	ADD ZL, r17 
-                                 	ADC ZH, r18 ;2 + 16
-                                 	LSL ZL ; 
-                                 	ROL ZH ; 
-                                 
-                                 	LPM @0, Z ;0x0818
-                                 
-                                 	; Z is no longer in proper PC, so set it back to proper PC format. 
-                                 	; TODO: replace this code with a swap routine? no clue which is faster (yet.)
-                                 	LSR ZH
-                                 	ASR ZL
-                                 	ADD ZH, r16
-                                 	SUB ZH, R18
-                                 	SBC ZL, R17
-                                 	
-                                 	;WANT 0x0801
-                                 
-                                 	;RET
-                                 	JMP dereferencer_return
-                                 
-                                 dereferencer_EEPROM_load:
-                                 	; IF ZH <= EEPROM_END then EEPROM
-                                 	;	ZH -= HIGH(EEPROM_START_EMU)
-                                 	;   load data into reg from EEPROM data
-                                 	;   ZH += HIGH(EEPROM_START_EMU
-                                 	; IF ZH > EEPROM_END then CRASH
-                                 	CPI ZH, HIGH(EEPROM_END_EMU)+1
-                                 	BRGE BREAK_load
-                                 
-                                 	BREAK
-                                 
-                                 dereferencer_BREAK_load:
-                                 	BREAK
-                                 
-                                 	;RET
-                                 	JMP dereferencer_return
-                                 
-                                 dereferencer_return:
+                                 .MACRO swap8
+                                 	mov @2, @0 
+                                 	mov @0, @1
+                                 	mov @1, @2
                                  .ENDMACRO
-                                 .include "Instructions/LDA.asm"
                                  
-                                  * LDA.asm
-                                  *
-                                  *  Created: 5/12/2018 9:14:03 PM
-                                  *   Author: ROTP
-                                  */ 
+                                 .MACRO swapPCwithTEMPPC
+                                 	mov r16, zl
+                                 	mov zl, TEMPPCL
+                                 	mov TEMPPCL, r16
                                  
+                                 	mov r16, zh
+                                 	mov zh, TEMPPCH
+                                 	mov TEMPPCH, r16
                                  
-                                  dereferencePCtoA:
-                                 	;328p memory starts at 0x0100 and goes up to 0x8ff. 
-                                 	;6502 memory starts at 0x0000.
-                                 	
-                                 	;Hence, all memory addresses referenced will have to be less than 0x07ff (6502 address),
-                                 	;because we will have to add 100 to it. 
-                                 
-                                 	;previous RAM only code:
-                                 	;ldi r16, HIGH(SRAM_START)
-                                 	;adc ZH, r16
-                                 	;
-                                 	;ld AR, Z+
-                                 	;
-                                 	;sbc ZH, r16
-                                 	
-                                 
-                                 
-                                 SRAM_load:
-                                 	; IF ZH <= HIGH SRAM_END_EMU then RAM
-                                 	;	ZH += HIGH(SRAM_START)
-                                 	;   load data into reg
-                                 	;   ZH -= HIGH(SRAM_START)
-000411 30f8                      	CPI ZH, HIGH(SRAM_END_EMU)+1
-000412 f42c                      	BRGE ROM_load
-                                 
-000413 e001                      	LDI r16, HIGH(SRAM_START)
-                                 
-                                 	;ADIW ZH, HIGH(SRAM_START)
-000414 0ff0                      	ADD ZH, r16
-                                 	
-000415 9001                      	LD AR, Z+
-                                 
-                                 	;SBIW ZH, HIGH(SRAM_START)
-000416 1bf0                      	SUB ZH, r16
-                                 	
-000417 9508                      	RET 
-                                 
-                                 ROM_load:
-                                 	; IF ZH <= ROM_END then ROM
-                                 	;	ZH -= HIGH(ROM_START_EMU)
-                                 	;   load data into reg from ROM data
-                                 	;   ZH += HIGH(ROM_START_EMU)
-000418 31f0                      	CPI ZH, HIGH(ROM_END_EMU)+1 ;0x0801
-000419 f47c                      	BRGE EEPROM_load
-                                 
-00041a e008                      	LDI r16, HIGH(ROM_START_EMU)
-00041b e01b                      	LDI r17, LOW(ROMcode)
-00041c e024                      	LDI r18, HIGH(ROMcode)
-00041d 1bf0                      	SUB ZH, r16
-                                 
-                                 	;Z now has the proper index of the data we want from our large ROM "array". We need to add the array ptr to Z now and then multiply by two
-00041e 0fe1                      	ADD ZL, r17
-00041f 1ff2                      	ADC ZH, r18
-000420 0fee                      	LSL ZL
-000421 1fff                      	ROL ZH
-                                 
-000422 9004                      	LPM AR, Z ;0x0818
-                                 
-                                 	; Z is no longer in proper PC, so set it back to proper PC format. 
-                                 	; TODO: replace this code with a swap routine? no clue which is faster (yet.)
-000423 95f6                      	LSR ZH
-000424 95e5                      	ASR ZL
-000425 0ff0                      	ADD ZH, r16
-000426 1bf2                      	SUB ZH, R18
-000427 0be1                      	SBC ZL, R17
-                                 	
-                                 	;WANT 0x0801
-                                 
-000428 9508                      	RET
-                                 
-                                 EEPROM_load:
-                                 	; IF ZH <= EEPROM_END then EEPROM
-                                 	;	ZH -= HIGH(EEPROM_START_EMU)
-                                 	;   load data into reg from EEPROM data
-                                 	;   ZH += HIGH(EEPROM_START_EMU
-                                 	; IF ZH > EEPROM_END then CRASH
-000429 31f4                      	CPI ZH, HIGH(EEPROM_END_EMU)+1
-00042a f40c                      	BRGE BREAK_load
-                                 
-00042b 9598                      	BREAK
-                                 
-                                 BREAK_load:
-00042c 9598                      	BREAK
-                                 
-00042d 9508                      	RET
-                                 
-                                  LDA_immediate: ;LDA #$09 => A9 09
-00042e 9631                      	ADIW ZH:ZL, 1 ;grab the next byte 
-                                 
-                                 	;CALL dereferencePCtoA ;todo; use a macro here. 
-00042f 30f8
-000430 f434
-000431 e001
-000432 0ff0
-000433 9001
-000434 1bf0
-000435 940c 044f
-000437 31f0
-000438 f484
-000439 e008
-00043a e01b
-00043b e024
-00043c 1bf0
-00043d 0fe1
-00043e 1ff2
-00043f 0fee
-000440 1fff
-000441 9004
-000442 95f6
-000443 95e5
-000444 0ff0
-000445 1bf2
-000446 0be1
-000447 940c 044f
-000449 31f4
-00044a f70c
-00044b 9598
-00044c 9598
-00044d 940c 044f                 	dereferencer AR
-                                 	
-00044f 9631                      	ADIW ZH:ZL, 1
-                                 
+                                 	;swap8 zl TEMPPCL
+                                 	;swap8 zh TEMPPCH
                                  .include "memorymap.asm"
-000450 9508                      
+                                 
                                   * memorymap.asm
                                   *
                                   *  Created: 5/12/2018 7:26:24 PM
@@ -2330,41 +2143,730 @@ c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(12): warning: 
                                  
                                   .EQU EEPROM_START_EMU = 0x1000
                                   .EQU EEPROM_END_EMU   = 0x13FF 
+                                 .include "dereferencer.asm"
                                  
+                                  * dereferencer.asm
+                                  *
+                                  *  Created: 5/13/2018 12:35:43 AM
+                                  *   Author: ROTP
+                                  */ 
+                                 
+                                 .MACRO dereferencer
+                                 ;dereferencer:
+                                 dereferencer_SRAM_load:
+                                 	; IF ZH <= HIGH SRAM_END_EMU then RAM
+                                 	;	ZH += HIGH(SRAM_START)
+                                 	;   load data into reg
+                                 	;   ZH -= HIGH(SRAM_START)
+                                 	CPI ZH, HIGH(SRAM_END_EMU)+1
+                                 	BRGE dereferencer_ROM_load
+                                 
+                                 	LDI r16, HIGH(SRAM_START)
+                                 
+                                 	ADD ZH, r16
+                                 	
+                                 	LD @0, Z
+                                 
+                                 	SUB ZH, r16
+                                 	
+                                 	;RET 
+                                 	JMP dereferencer_return
+                                 
+                                 dereferencer_ROM_load:
+                                 	; IF ZH <= ROM_END then ROM
+                                 	;	ZH -= HIGH(ROM_START_EMU)
+                                 	;   load data into reg from ROM data
+                                 	;   ZH += HIGH(ROM_START_EMU)
+                                 	CPI ZH, HIGH(ROM_END_EMU)+1 ;
+                                 	BRGE dereferencer_EEPROM_load
+                                 
+                                 	LDI r16, HIGH(ROM_START_EMU)
+                                 	LDI r17, LOW(ROMcode)
+                                 	LDI r18, HIGH(ROMcode)
+                                 	MOV R19, ZL
+                                 	MOV R20, ZH
+                                 	SUB ZH, r16 
+                                 
+                                 	;Z now has the proper index of the data we want from our large ROM "array". We need to add the array ptr to Z now and then multiply by two
+                                 	LSL R17
+                                 	ROL R18
+                                 	ADD ZL, R17
+                                 	ADC ZH, R18
+                                 
+                                 	LPM @0, Z ;want 0x817
+                                 
+                                 	; Z is no longer in proper PC, so set it back to proper PC format. 
+                                 	; TODO: replace this code with a swap routine? no clue which is faster (yet.)
+                                 	;SUB ZH, R18
+                                 	;SBC ZL, R17
+                                 	MOV ZL, R19
+                                 	MOV ZH, R20
+                                 	
+                                 
+                                 	;RET
+                                 	JMP dereferencer_return
+                                 	
+                                 dereferencer_EEPROM_load:
+                                 	; IF ZH <= EEPROM_END then EEPROM
+                                 	;	ZH -= HIGH(EEPROM_START_EMU)
+                                 	;   load data into reg from EEPROM data
+                                 	;   ZH += HIGH(EEPROM_START_EMU
+                                 	; IF ZH > EEPROM_END then CRASH
+                                 	CPI ZH, HIGH(EEPROM_END_EMU)+1
+                                 	BRGE dereferencer_BREAK_load
+                                 
+                                 	BREAK
+                                 
+                                 dereferencer_BREAK_load:
+                                 	BREAK
+                                 
+                                 	;RET
+                                 	JMP dereferencer_return
+                                 dereferencer_return:
+                                 	
+                                 	NOP
+                                 	;ret
+                                 
+                                 .include "Instructions/unimplemented_instructions.asm"
+                                 
+                                  * unimplemented_instructions.asm
+                                  *
+                                  *  Created: 5/13/2018 2:23:13 AM
+                                  *   Author: ROTP
+                                  */ 
+                                 
+                                 ;BRK_implied:
+                                 ORA_X_indirect:
+                                 ORA_zpg:
+                                 ASL_zpg:
+                                 PHP_implied:
+                                 ORA_immediate:
+                                 ASL_A:
+                                 ORA_absolute:
+                                 ASL_absolute:
+                                 BPL_relative:
+                                 ORA_indirect_Y:
+                                 ORA_zpg_X:
+                                 ASL_zpg_X:
+                                 CLC_implied:
+                                 ORA_absolute_Y:
+                                 ORA_absolute_X:
+                                 ASL_absolute_X:
+                                 JSR_absolute:
+                                 AND_X_indirect:
+                                 BIT_zpg:
+                                 AND_zpg:
+                                 ROL_zpg:
+                                 PLP_implied:
+                                 AND_immediate:
+                                 ROL_A:
+                                 BIT_absolute:
+                                 AND_absolute:
+                                 ROL_absolute:
+                                 BMI_relative:
+                                 AND_indirect_Y:
+                                 AND_zpg_X:
+                                 ROL_zpg_X:
+                                 SEC_implied:
+                                 AND_absolute_Y:
+                                 AND_absolute_X:
+                                 ROL_absolute_X:
+                                 RTI_implied:
+                                 EOR_X_indirect:
+                                 EOR_zpg:
+                                 LSR_zpg:
+                                 PHA_implied:
+                                 EOR_immediate:
+                                 LSR_A:
+                                 JMP_absolute:
+                                 EOR_absolute:
+                                 LSR_absolute:
+                                 BVC_relative:
+                                 EOR_indirect_Y:
+                                 EOR_zpg_X:
+                                 LSR_zpg_X:
+                                 CLI_implied:
+                                 EOR_absolute_Y:
+                                 EOR_absolute_X:
+                                 LSR_absolute_X:
+                                 RTS_implied:
+                                 ADC_X_indirect:
+                                 ADC_zpg:
+                                 ROR_zpg:
+                                 PLA_implied:
+                                 ADC_immediate:
+                                 ROR_A:
+                                 JMP_indirect:
+                                 ADC_absolute:
+                                 ROR_absolute:
+                                 BVS_relative:
+                                 ADC_indirect_Y:
+                                 ADC_zpg_X:
+                                 ROR_zpg_X:
+                                 SEI_implied:
+                                 ADC_absolute_Y:
+                                 ADC_absolute_X:
+                                 ROR_absolute_X:
+                                 STA_X_indirect:
+                                 STY_zpg:
+                                 STA_zpg:
+                                 STX_zpg:
+                                 DEY_implied:
+                                 TXA_implied:
+                                 STY_absolute:
+                                 STA_absolute:
+                                 STX_absolute:
+                                 BCC_relative:
+                                 STA_indirect_Y:
+                                 STY_zpg_X:
+                                 STA_zpg_X:
+                                 STX_zpg_Y:
+                                 TYA_implied:
+                                 STA_absolute_Y:
+                                 TXS_implied:
+                                 STA_absolute_X:
+                                 LDY_immediate:
+                                 LDA_X_indirect:
+                                 LDX_immediate:
+                                 LDY_zpg:
+                                 LDA_zpg:
+                                 LDX_zpg:
+                                 TAY_implied:
+                                 ;LDA_immediate:
+                                 TAX_implied:
+                                 LDY_absolute:
+                                 ;LDA_absolute:
+                                 LDX_absolute:
+                                 BCS_relative:
+                                 LDA_indirect_Y:
+                                 LDY_zpg_X:
+                                 LDA_zpg_X:
+                                 LDX_zpg_Y:
+                                 CLV_implied:
+                                 LDA_absolute_Y:
+                                 TSX_implied:
+                                 LDY_absolute_X:
+                                 LDA_absolute_X:
+                                 LDX_absolute_Y:
+                                 CPY_immediate:
+                                 CMP_X_indirect:
+                                 CPY_zpg:
+                                 CMP_zpg:
+                                 DEC_zpg:
+                                 INY_implied:
+                                 CMP_immediate:
+                                 DEX_implied:
+                                 CPY_absolute:
+                                 CMP_absolute:
+                                 DEC_absolute:
+                                 BNE_relative:
+                                 CMP_indirect_Y:
+                                 CMP_zpg_X:
+                                 DEC_zpg_X:
+                                 CLD_implied:
+                                 CMP_absolute_Y:
+                                 CMP_absolute_X:
+                                 DEC_absolute_X:
+                                 CPX_immediate:
+                                 SBC_X_indirect:
+                                 CPX_zpg:
+                                 SBC_zpg:
+                                 INC_zpg:
+                                 INX_implied:
+                                 SBC_immediate:
+                                 NOP_implied:
+                                 CPX_absolute:
+                                 SBC_absolute:
+                                 INC_absolute:
+                                 BEQ_relative:
+                                 SBC_indirect_Y:
+                                 SBC_zpg_X:
+                                 INC_zpg_X:
+                                 SED_implied:
+                                 SBC_absolute_Y:
+                                 SBC_absolute_X:
+                                 INC_absolute_X:
+                                 INVALID_OPCODE:
+                                 .include "Instructions/BRK.asm"
+000415 9598                      
+                                  * BRK.asm
+                                  *
+                                  *  Created: 5/13/2018 2:46:37 AM
+                                  *   Author: ROTP
+                                  */ 
+                                 
+                                 BRK_implied:
+                                 .include "Instructions/LDA.asm"
+000416 9598                      
+                                  * LDA.asm
+                                  *
+                                  *  Created: 5/12/2018 9:14:03 PM
+                                  *   Author: ROTP
+                                  */ 
+                                 
+                                 
+                                 ;LDA_X_indirect:
+                                 ;LDA_zpg:
+                                 
+                                 LDA_immediate: ;LDA #$09 => A9 09
+000417 2f0e
+000418 2fe4
+000419 2f40
+00041a 2f0f
+00041b 2ff5
+00041c 2f50                      	swapPCwithTEMPPC
+                                 
+00041d 9631                      	ADIW ZH:ZL, 1 ;grab the next byte 
+                                 	
+00041e 30f8
+00041f f434
+000420 e001
+000421 0ff0
+000422 8020
+000423 1bf0
+000424 940c 043d
+000426 31f0
+000427 f47c
+000428 e008
+000429 e01b
+00042a e024
+00042b 2f3e
+00042c 2f4f
+00042d 1bf0
+00042e 0f11
+00042f 1f22
+000430 0fe1
+000431 1ff2
+000432 9024
+000433 2fe3
+000434 2ff4
+000435 940c 043d
+000437 31f4
+000438 f40c
+000439 9598
+00043a 9598
+00043b 940c 043d
+00043d 0000                      	dereferencer AR
+                                 	;call dereferencer
+                                 	
+00043e 9631                      	ADIW ZH:ZL, 1 ;increase pc to next instruction
+                                 
+00043f 9508                      	RET
+                                 
+                                 LDA_absolute:
+000440 2f0e
+000441 2fe4
+000442 2f40
+000443 2f0f
+000444 2ff5
+000445 2f50                      	swapPCwithTEMPPC
+                                 
+000446 9631                      	ADIW ZH:ZL, 1
+                                 
+                                 	;TODO: verify endianness is correct. 
+000447 30f8
+000448 f434
+000449 e001
+00044a 0ff0
+00044b 8160
+00044c 1bf0
+00044d 940c 0466
+00044f 31f0
+000450 f47c
+000451 e008
+000452 e01b
+000453 e024
+000454 2f3e
+000455 2f4f
+000456 1bf0
+000457 0f11
+000458 1f22
+000459 0fe1
+00045a 1ff2
+00045b 9164
+00045c 2fe3
+00045d 2ff4
+00045e 940c 0466
+000460 31f4
+000461 f40c
+000462 9598
+000463 9598
+000464 940c 0466
+000466 0000                      	dereferencer r22 
+000467 9631                      	ADIW ZH:ZL, 1
+000468 30f8
+000469 f434
+00046a e001
+00046b 0ff0
+00046c 8170
+00046d 1bf0
+00046e 940c 0487
+000470 31f0
+000471 f47c
+000472 e008
+000473 e01b
+000474 e024
+000475 2f3e
+000476 2f4f
+000477 1bf0
+000478 0f11
+000479 1f22
+00047a 0fe1
+00047b 1ff2
+00047c 9174
+00047d 2fe3
+00047e 2ff4
+00047f 940c 0487
+000481 31f4
+000482 f40c
+000483 9598
+000484 9598
+000485 940c 0487
+000487 0000                      	dereferencer r23
+000488 2fe6                      	mov zl, r22
+000489 2ff7                      	mov zh, r23
+                                 
+00048a 30f8
+00048b f434
+00048c e001
+00048d 0ff0
+00048e 8020
+00048f 1bf0
+000490 940c 04a9
+000492 31f0
+000493 f47c
+000494 e008
+000495 e01b
+000496 e024
+000497 2f3e
+000498 2f4f
+000499 1bf0
+00049a 0f11
+00049b 1f22
+00049c 0fe1
+00049d 1ff2
+00049e 9024
+00049f 2fe3
+0004a0 2ff4
+0004a1 940c 04a9
+0004a3 31f4
+0004a4 f40c
+0004a5 9598
+0004a6 9598
+0004a7 940c 04a9
+0004a9 0000                      	dereferencer AR
+                                 
+0004aa 9631                      	ADIW ZH:ZL, 1
+0004ab 9508                      	RET
+                                 
+                                 
+                                 ;LDA_indirect_Y:
+                                 ;LDA_zpg_X
+                                 ;LDA_absolute_Y:
+                                 .include "instruction_mappings.asm"
+                                 
+                                  * instruction_mappings.asm
+                                  *
+                                  *  Created: 5/13/2018 1:48:46 AM
+                                  *   Author: ROTP
+                                  */ 
+                                 
+                                 
+0004ac 0416
+0004ad 0415
+0004ae 0415
+0004af 0415
+0004b0 0415
+0004b1 0415
+0004b2 0415
+0004b3 0415
+0004b4 0415
+0004b5 0415
+0004b6 0415
+0004b7 0415
+0004b8 0415
+0004b9 0415
+0004ba 0415
+0004bb 0415
+0004bc 0415
+0004bd 0415
+0004be 0415
+0004bf 0415
+0004c0 0415
+0004c1 0415
+0004c2 0415
+0004c3 0415
+0004c4 0415
+0004c5 0415
+0004c6 0415
+0004c7 0415
+0004c8 0415
+0004c9 0415
+0004ca 0415
+0004cb 0415
+0004cc 0415
+0004cd 0415
+0004ce 0415
+0004cf 0415
+0004d0 0415
+0004d1 0415
+0004d2 0415
+0004d3 0415
+0004d4 0415
+0004d5 0415
+0004d6 0415
+0004d7 0415
+0004d8 0415
+0004d9 0415
+0004da 0415
+0004db 0415
+0004dc 0415
+0004dd 0415
+0004de 0415
+0004df 0415
+0004e0 0415
+0004e1 0415
+0004e2 0415
+0004e3 0415
+0004e4 0415
+0004e5 0415
+0004e6 0415
+0004e7 0415
+0004e8 0415
+0004e9 0415
+0004ea 0415
+0004eb 0415
+0004ec 0415
+0004ed 0415
+0004ee 0415
+0004ef 0415
+0004f0 0415
+0004f1 0415
+0004f2 0415
+0004f3 0415
+0004f4 0415
+0004f5 0415
+0004f6 0415
+0004f7 0415
+0004f8 0415
+0004f9 0415
+0004fa 0415
+0004fb 0415
+0004fc 0415
+0004fd 0415
+0004fe 0415
+0004ff 0415
+000500 0415
+000501 0415
+000502 0415
+000503 0415
+000504 0415
+000505 0415
+000506 0415
+000507 0415
+000508 0415
+000509 0415
+00050a 0415
+00050b 0415
+00050c 0415
+00050d 0415
+00050e 0415
+00050f 0415
+000510 0415
+000511 0415
+000512 0415
+000513 0415
+000514 0415
+000515 0415
+000516 0415
+000517 0415
+000518 0415
+000519 0415
+00051a 0415
+00051b 0415
+00051c 0415
+00051d 0415
+00051e 0415
+00051f 0415
+000520 0415
+000521 0415
+000522 0415
+000523 0415
+000524 0415
+000525 0415
+000526 0415
+000527 0415
+000528 0415
+000529 0415
+00052a 0415
+00052b 0415
+00052c 0415
+00052d 0415
+00052e 0415
+00052f 0415
+000530 0415
+000531 0415
+000532 0415
+000533 0415
+000534 0415
+000535 0415
+000536 0415
+000537 0415
+000538 0415
+000539 0415
+00053a 0415
+00053b 0415
+00053c 0415
+00053d 0415
+00053e 0415
+00053f 0415
+000540 0415
+000541 0415
+000542 0415
+000543 0415
+000544 0415
+000545 0415
+000546 0415
+000547 0415
+000548 0415
+000549 0415
+00054a 0415
+00054b 0415
+00054c 0415
+00054d 0415
+00054e 0415
+00054f 0415
+000550 0415
+000551 0415
+000552 0415
+000553 0415
+000554 0415
+000555 0417
+000556 0415
+000557 0415
+000558 0415
+000559 0440
+00055a 0415
+00055b 0415
+00055c 0415
+00055d 0415
+00055e 0415
+00055f 0415
+000560 0415
+000561 0415
+000562 0415
+000563 0415
+000564 0415
+000565 0415
+000566 0415
+000567 0415
+000568 0415
+000569 0415
+00056a 0415
+00056b 0415
+00056c 0415
+00056d 0415
+00056e 0415
+00056f 0415
+000570 0415
+000571 0415
+000572 0415
+000573 0415
+000574 0415
+000575 0415
+000576 0415
+000577 0415
+000578 0415
+000579 0415
+00057a 0415
+00057b 0415
+00057c 0415
+00057d 0415
+00057e 0415
+00057f 0415
+000580 0415
+000581 0415
+000582 0415
+000583 0415
+000584 0415
+000585 0415
+000586 0415
+000587 0415
+000588 0415
+000589 0415
+00058a 0415
+00058b 0415
+00058c 0415
+00058d 0415
+00058e 0415
+00058f 0415
+000590 0415
+000591 0415
+000592 0415
+000593 0415
+000594 0415
+000595 0415
+000596 0415
+000597 0415
+000598 0415
+000599 0415
+00059a 0415
+00059b 0415
+00059c 0415
+00059d 0415
+00059e 0415
+00059f 0415
+0005a0 0415
+0005a1 0415
+0005a2 0415
+0005a3 0415
+0005a4 0415
+0005a5 0415
+0005a6 0415
+0005a7 0415
+0005a8 0415
+0005a9 0415
+0005aa 0415
+0005ab 0415                      
                                  init:
                                  	; TODO: Copy RAMcode to SRAM
-000451 e0f0                      	ldi ZH, HIGH(RAMcodeUNLOADED)
-000452 e0eb                      	ldi ZL, LOW(RAMcodeUNLOADED)
+0005ac e0f0                      	ldi ZH, HIGH(RAMcodeUNLOADED)
+0005ad e0eb                      	ldi ZL, LOW(RAMcodeUNLOADED)
                                  
-000453 e0b1                      	ldi XH, HIGH(SRAM_START)
-000454 e0a0                      	ldi XL, LOW(SRAM_START)
+0005ae e0b1                      	ldi XH, HIGH(SRAM_START)
+0005af e0a0                      	ldi XL, LOW(SRAM_START)
                                  
-000455 e0d8                      	ldi YH, HIGH(SRAM_END)
-000456 efcf                      	ldi YL, LOW(SRAM_END)
+0005b0 e0d8                      	ldi YH, HIGH(SRAM_END)
+0005b1 efcf                      	ldi YL, LOW(SRAM_END)
                                  
-000457 0fee                      	LSL ZL
-000458 1fff                      	ROL ZH
+0005b2 0fee                      	LSL ZL
+0005b3 1fff                      	ROL ZH
                                  
                                  ram_copy_loop:
-000459 9005                      	lpm r0, Z+
-00045a 920d                      	st X+, r0
+0005b4 9005                      	lpm r0, Z+
+0005b5 920d                      	st X+, r0
                                  
-00045b 17bd                      	cp XH, YH
-00045c f7e1                      	brne ram_copy_loop
-00045d 17ac                      	cp XL, YL
-00045e f7d1                      	brne ram_copy_loop
+0005b6 17bd                      	cp XH, YH
+0005b7 f7e1                      	brne ram_copy_loop
+0005b8 17ac                      	cp XL, YL
+0005b9 f7d1                      	brne ram_copy_loop
                                  
                                  ram_copy_done:
                                  
                                  
-00045f 940c 0461                 	jmp _start
+0005ba 940c 05bc                 	jmp _start
                                  
                                  _start:
-000461 2400                      	clr AR ; clear A register
-000462 2411                      	clr XR ; clear X register
-000463 2422                      	clr YR ; clear Y register
-000464 27ff                      	clr ZH ; clear PC HIGH register
-000465 27ee                      	clr ZL ; clear PC LOW register
+0005bc 2422                      	clr AR ; clear A register
+0005bd 2433                      	clr XR ; clear X register
+0005be 2444                      	clr YR ; clear Y register
+0005bf 27ff                      	clr ZH ; clear PC HIGH register
+0005c0 27ee                      	clr ZL ; clear PC LOW register
+0005c1 27bb                      	CLR XH
+0005c2 27aa                      	CLR XL
+0005c3 27dd                      	CLR YH
+0005c4 27cc                      	CLR YL
+0005c5 2400                      	CLR R0
                                  
                                  	; 1. Fetch instruction from PC
                                  	; 2. Decode instruction
@@ -2378,17 +2880,71 @@ c:\users\rotp\Documents\Atmel Studio\7.0\6502EMU\6502EMU\main.asm(12): warning: 
                                  
                                  
                                  fetch_setup:
+                                 	;we want the code to start in ROM. 
+0005c6 e0f8                      	LDI ZH, HIGH(ROM_START_EMU)
+0005c7 e0e0                      	LDI ZL, LOW(ROM_START_EMU)
+0005c8 e058                      	LDI TEMPPCH, HIGH(ROM_START_EMU) 
+0005c9 e040                      	LDI TEMPPCL, LOW(ROM_START_EMU)
                                  
                                  fetch:
+0005ca 0000                      	nop
+                                 
+0005cb 30f8
+0005cc f434
+0005cd e001
+0005ce 0ff0
+0005cf 8040
+0005d0 1bf0
+0005d1 940c 05ea
+0005d3 31f0
+0005d4 f47c
+0005d5 e008
+0005d6 e01b
+0005d7 e024
+0005d8 2f3e
+0005d9 2f4f
+0005da 1bf0
+0005db 0f11
+0005dc 1f22
+0005dd 0fe1
+0005de 1ff2
+0005df 9044
+0005e0 2fe3
+0005e1 2ff4
+0005e2 940c 05ea
+0005e4 31f4
+0005e5 f40c
+0005e6 9598
+0005e7 9598
+0005e8 940c 05ea
+0005ea 0000                      	dereferencer INSTRUCTION
+0005eb e002                      	ldi r16, 2
+0005ec 9e40                      	mul INSTRUCTION, r16
+                                 
+                                 	;we have the pointer to the instruction.
+                                 	;preserve the old pc
+                                 	;we need to add to Z for the offset. 
+0005ed 2f4e                      	mov TEMPPCL, ZL
+0005ee 2f5f                      	mov TEMPPCH, ZH
+                                 
+                                 	;calcutate the pointer for getting the instruction's address. 
+0005ef e5e8                      	LDI ZL, LOW(instructionMapping*2)
+0005f0 e0f9                      	LDI ZH, HIGH(instructionMapping*2)
+0005f1 0de0                      	add zl, r0
+0005f2 1df1                      	adc zh, r1
                                  	
+                                 	;grab the instruction address and store it in Z
+0005f3 9005                      	lpm R0, Z+
+0005f4 9014                      	lpm r1, z
+0005f5 2de0                      	mov zl, r0
+0005f6 2df1                      	mov zh, r1
                                  
-                                 	;call LDA_immediate
+0005f7 9509                      	icall
                                  
-000466 e0f8                      	LDI ZH, HIGH(ROM_START_EMU)
-000467 940e 042e                 	call LDA_immediate
-                                 	;dereferencer AR
+0005f8 cfd1                          rjmp fetch
                                  
-000469 cffc                          rjmp fetch
+                                 
+                                 
 
 
 RESOURCE USE INFORMATION
@@ -2406,40 +2962,40 @@ counted separately from r26..r31 here.
 .dseg memory usage only counts static data declared with .byte
 
 "ATmega328P" register use summary:
-x  :   1 y  :   0 z  :   5 r0 :   7 r1 :   1 r2 :   1 r3 :   0 r4 :   0 
+x  :   1 y  :   0 z  :  13 r0 :   6 r1 :   3 r2 :   5 r3 :   1 r4 :   4 
 r5 :   0 r6 :   0 r7 :   0 r8 :   0 r9 :   0 r10:   0 r11:   0 r12:   0 
-r13:   0 r14:   0 r15:   0 r16:  12 r17:   6 r18:   6 r19:   0 r20:   0 
-r21:   0 r22:   0 r23:   0 r24:   0 r25:   0 r26:   2 r27:   2 r28:   2 
-r29:   2 r30:  13 r31:  28 
-Registers used: 14 out of 35 (40.0%)
+r13:   0 r14:   0 r15:   0 r16:  35 r17:  15 r18:  15 r19:  10 r20:  16 
+r21:   6 r22:   3 r23:   3 r24:   0 r25:   0 r26:   3 r27:   3 r28:   3 
+r29:   3 r30:  33 r31:  63 
+Registers used: 21 out of 35 (60.0%)
 
 "ATmega328P" instruction use summary:
-.lds  :   0 .sts  :   0 adc   :   2 add   :   6 adiw  :   2 and   :   0 
-andi  :   0 asr   :   2 bclr  :   0 bld   :   0 brbc  :   0 brbs  :   0 
-brcc  :   0 brcs  :   0 break :   4 breq  :   0 brge  :   6 brhc  :   0 
+.lds  :   0 .sts  :   0 adc   :   6 add   :  11 adiw  :   5 and   :   0 
+andi  :   0 asr   :   0 bclr  :   0 bld   :   0 brbc  :   0 brbs  :   0 
+brcc  :   0 brcs  :   0 break :  12 breq  :   0 brge  :  15 brhc  :   0 
 brhs  :   0 brid  :   0 brie  :   0 brlo  :   0 brlt  :   0 brmi  :   0 
 brne  :   2 brpl  :   0 brsh  :   0 brtc  :   0 brts  :   0 brvc  :   0 
-brvs  :   0 bset  :   0 bst   :   0 call  :   1 cbi   :   0 cbr   :   0 
-clc   :   0 clh   :   0 cli   :   0 cln   :   0 clr   :   5 cls   :   0 
+brvs  :   0 bset  :   0 bst   :   0 call  :   0 cbi   :   0 cbr   :   0 
+clc   :   0 clh   :   0 cli   :   0 cln   :   0 clr   :  10 cls   :   0 
 clt   :   0 clv   :   0 clz   :   0 com   :   0 cp    :   2 cpc   :   0 
-cpi   :   6 cpse  :   0 dec   :   0 eor   :   0 fmul  :   0 fmuls :   0 
-fmulsu:   0 icall :   0 ijmp  :   0 in    :   0 inc   :   0 jmp   :   5 
-ld    :   2 ldd   :   0 ldi   :  15 lds   :   0 lpm   :   5 lsl   :   3 
-lsr   :   2 mov   :   0 movw  :   0 mul   :   0 muls  :   0 mulsu :   0 
-neg   :   0 nop   :   0 or    :   0 ori   :   0 out   :   0 pop   :   0 
-push  :   0 rcall :   0 ret   :   4 reti  :   0 rjmp  :   1 rol   :   3 
-ror   :   0 sbc   :   2 sbci  :   0 sbi   :   0 sbic  :   0 sbis  :   0 
+cpi   :  15 cpse  :   0 dec   :   0 eor   :   0 fmul  :   0 fmuls :   0 
+fmulsu:   0 icall :   1 ijmp  :   0 in    :   0 inc   :   0 jmp   :  17 
+ld    :   5 ldd   :   0 ldi   :  33 lds   :   0 lpm   :  14 lsl   :   6 
+lsr   :   0 mov   :  38 movw  :   0 mul   :   1 muls  :   0 mulsu :   0 
+neg   :   0 nop   :   6 or    :   0 ori   :   0 out   :   0 pop   :   0 
+push  :   0 rcall :   0 ret   :   2 reti  :   0 rjmp  :   1 rol   :   6 
+ror   :   0 sbc   :   0 sbci  :   0 sbi   :   0 sbic  :   0 sbis  :   0 
 sbiw  :   0 sbr   :   0 sbrc  :   0 sbrs  :   0 sec   :   0 seh   :   0 
 sei   :   0 sen   :   0 ser   :   0 ses   :   0 set   :   0 sev   :   0 
 sez   :   0 sleep :   0 spm   :   0 st    :   1 std   :   0 sts   :   0 
-sub   :   6 subi  :   0 swap  :   0 tst   :   0 wdr   :   0 
+sub   :  10 subi  :   0 swap  :   0 tst   :   0 wdr   :   0 
 Instructions used: 23 out of 113 (20.4%)
 
 "ATmega328P" memory use summary [bytes]:
 Segment   Begin    End      Code   Data   Used    Size   Use%
 ---------------------------------------------------------------
-[.cseg] 0x000000 0x0008d4    182   2078   2260   32768   6.9%
+[.cseg] 0x000000 0x000bf2    460   2598   3058   32768   9.3%
 [.dseg] 0x000100 0x000900      0   2048   2048    2048 100.0%
 [.eseg] 0x000000 0x000003      0      3      3    1024   0.3%
 
-Assembly complete, 0 errors, 1 warnings
+Assembly complete, 0 errors, 2 warnings

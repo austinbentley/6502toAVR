@@ -1,13 +1,13 @@
 /*
- * LDA.asm
+ * LDY.asm
  *
- *  Created: 5/12/2018 9:14:03 PM
+ *  Created: 5/13/2018 12:54:02 PM
  *   Author: ROTP
  */ 
 
 
-;LDA_X_indirect:
-LDA_zpg:
+ 
+ LDY_zpg:
 	swapPCwithTEMPPC
 
 	ADIW ZH:ZL, 1
@@ -18,8 +18,8 @@ LDA_zpg:
 	MOV ZL, R24
 	CLR ZH
 
-	dereferencer AR
-	updateNZfromREGISTER AR
+	dereferencer YR
+	updateNZfromREGISTER YR
 
 	MOV ZL, R22
 	MOV ZH, R23
@@ -27,19 +27,20 @@ LDA_zpg:
 
 	RET
 
-LDA_immediate: ;LDA #$09 => A9 09
+LDY_immediate:
 	swapPCwithTEMPPC
 
 	ADIW ZH:ZL, 1 ;grab the next byte 
 	
-	dereferencer AR
+	dereferencer YR
+	updateNZfromREGISTER YR
 	;call dereferencer
 	
 	ADIW ZH:ZL, 1 ;increase pc to next instruction
 
 	RET
 
-LDA_absolute:
+LDY_absolute:
 	swapPCwithTEMPPC
 
 	ADIW ZH:ZL, 1
@@ -55,8 +56,8 @@ LDA_absolute:
 	mov zl, r22
 	mov zh, r23
 
-	dereferencer AR
-	updateNZfromREGISTER AR
+	dereferencer YR
+	updateNZfromREGISTER YR
 
 	mov zl, r24
 	mov zh, r25
@@ -64,10 +65,7 @@ LDA_absolute:
 	ADIW ZH:ZL, 1
 	RET
 
-
-;LDA_indirect_Y:
-
-LDA_zpg_X:
+LDY_zpg_X:
 	swapPCwithTEMPPC
 
 	ADIW ZH:ZL, 1
@@ -81,8 +79,8 @@ LDA_zpg_X:
 	add zl, XR
 	clc
 
-	dereferencer AR
-	updateNZfromREGISTER AR
+	dereferencer YR
+	updateNZfromREGISTER YR
 
 	MOV ZL, R22
 	MOV ZH, R23
@@ -90,36 +88,7 @@ LDA_zpg_X:
 
 	RET
 
-LDA_absolute_Y:
-	swapPCwithTEMPPC
-
-	ADIW ZH:ZL, 1
-
-	;TODO: verify endianness is correct. 
-	dereferencer r22
-	ADIW ZH:ZL, 1
-	dereferencer r23
-
-	mov r24, zl
-	mov r25, zh
-
-	mov zl, r22
-	mov zh, r23
-
-	clr r26
-	add zl, YR
-	adc zh, r26
-
-	dereferencer AR
-	updateNZfromREGISTER AR
-
-	mov zl, r24
-	mov zh, r25
-
-	ADIW ZH:ZL, 1
-	RET
-
-LDA_absolute_X:
+LDY_absolute_X:
 	swapPCwithTEMPPC
 
 	ADIW ZH:ZL, 1
@@ -139,8 +108,8 @@ LDA_absolute_X:
 	add zl, XR
 	adc zh, r26
 
-	dereferencer AR
-	updateNZfromREGISTER AR
+	dereferencer YR
+	updateNZfromREGISTER YR
 
 	mov zl, r24
 	mov zh, r25

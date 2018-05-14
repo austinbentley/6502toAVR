@@ -13,9 +13,40 @@ start: ;to avoid overwriting the interrupt table with our includes!
 
 .include "programcode.asm"
 .include "definitions.asm"
-.include "dereferencer.asm"
-.include "Instructions/LDA.asm"
+.include "general_macros.asm"
 .include "memorymap.asm"
+.include "dereferencer.asm"
+.include "Instructions/unimplemented_instructions.asm"
+.include "Instructions/BRK.asm"
+.include "Instructions/CLC.asm"
+.include "Instructions/CLD.asm"
+.include "Instructions/CLI.asm"
+.include "Instructions/CLV.asm"
+.include "Instructions/CMP.asm"
+.include "Instructions/CPX.asm"
+.include "Instructions/CPY.asm"
+.include "Instructions/INX.asm"
+.include "Instructions/INY.asm"
+.include "Instructions/JMP.asm"
+.include "Instructions/LDA.asm"
+.include "Instructions/LDX.asm"
+.include "Instructions/LDY.asm"
+.include "Instructions/NOP.asm"
+.include "Instructions/SEC.asm"
+.include "Instructions/SED.asm"
+.include "Instructions/SEI.asm"
+.include "Instructions/STA.asm"
+.include "Instructions/STX.asm"
+.include "Instructions/STY.asm"
+.include "Instructions/TAX.asm"
+.include "Instructions/TAY.asm"
+.include "Instructions/TXA.asm"
+.include "Instructions/TYA.asm"
+
+
+
+
+.include "instruction_mappings.asm"
 
 init:
 	; TODO: Copy RAMcode to SRAM
@@ -49,8 +80,14 @@ _start:
 	clr AR ; clear A register
 	clr XR ; clear X register
 	clr YR ; clear Y register
+	clr SR ; clear status register
 	clr ZH ; clear PC HIGH register
 	clr ZL ; clear PC LOW register
+	CLR XH
+	CLR XL
+	CLR YH
+	CLR YL
+	CLR R0
 
 	; 1. Fetch instruction from PC
 	; 2. Decode instruction
@@ -64,14 +101,39 @@ _start:
 
 
 fetch_setup:
+	;we want the code to start in ROM. 
+	LDI ZH, HIGH(ROM_START_EMU)
+	LDI ZL, LOW(ROM_START_EMU)
+	LDI TEMPPCH, HIGH(ROM_START_EMU) 
+	LDI TEMPPCL, LOW(ROM_START_EMU)
 
 fetch:
+
+	dereferencer INSTRUCTION
+	ldi r16, 2
+	mul INSTRUCTION, r16
+
+	;we have the pointer to the instruction.
+	;preserve the old pc
+	;we need to add to Z for the offset. 
+	mov TEMPPCL, ZL
+	mov TEMPPCH, ZH
+
+	;calcutate the pointer for getting the instruction's address. 
+	LDI ZL, LOW(instructionMapping*2)
+	LDI ZH, HIGH(instructionMapping*2)
+	add zl, r0
+	adc zh, r1
 	
+	;grab the instruction address and store it in Z
+	lpm R0, Z+
+	lpm r1, z
+	mov zl, r0
+	mov zh, r1
 
-	;call LDA_immediate
-
-	LDI ZH, HIGH(ROM_START_EMU)
-	call LDA_immediate
-	;dereferencer AR
+	icall
 
     rjmp fetch
+
+
+
