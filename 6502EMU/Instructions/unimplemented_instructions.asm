@@ -48,7 +48,7 @@ LSR_zpg:
 PHA_implied:
 EOR_immediate:
 LSR_A:
-JMP_absolute:
+;JMP_absolute:
 EOR_absolute:
 LSR_absolute:
 BVC_relative:
@@ -144,7 +144,7 @@ SBC_zpg:
 INC_zpg:
 ;INX_implied:
 SBC_immediate:
-NOP_implied:
+;NOP_implied:
 ;CPX_absolute:
 SBC_absolute:
 INC_absolute:
