@@ -1,1 +1,4 @@
 LDA, LDX, LDY need to ensure that N and Z flags are set when loading data. 
+
+create a script which will piggy back on the assembler and output it in a format for RAM, ROM, EEPROM code.
+	see if we can add this as part of the build chain?

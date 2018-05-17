@@ -13,6 +13,8 @@
  .DEF TEMPPCL = R20
  .DEF TEMPPCH = R21
 
+ ;R22 through R26 are considered junk registers and will be clobbered repeatedly. 
+
 
 /*
 SR Flags (bit 7 to bit 0):

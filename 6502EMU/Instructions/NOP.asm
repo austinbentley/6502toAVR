@@ -6,4 +6,8 @@
  */ 
 
 NOP_implied:
+	swapPCwithTEMPPC
+	;NOP
+	ADIW ZH:ZL, 1
+
 	RET

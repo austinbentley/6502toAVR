@@ -92,7 +92,76 @@
     <Compile Include="Instructions\BRK.asm">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Instructions\CLC.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Instructions\CLD.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Instructions\CLI.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Instructions\CLV.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Instructions\CMP.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Instructions\CPX.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Instructions\CPY.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Instructions\INX.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Instructions\INY.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Instructions\JMP.asm">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Instructions\LDA.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Instructions\LDX.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Instructions\LDY.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Instructions\NOP.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Instructions\SEC.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Instructions\SED.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Instructions\SEI.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Instructions\STA.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Instructions\STX.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Instructions\STY.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Instructions\TAX.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Instructions\TAY.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Instructions\TXA.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Instructions\TYA.asm">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Instructions\unimplemented_instructions.asm">
